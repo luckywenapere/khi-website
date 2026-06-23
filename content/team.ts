@@ -72,12 +72,10 @@ export const team: readonly Person[] = [
     ],
   },
   {
-    name: "Ajani Lukman Idowu",
+    name: "Honour Odozie",
     role: "Partnership / Volunteer Manager",
-    photo: "/images/people/ajani.jpg",
-    bio: [
-      "Ajani Lukman Idowu is a graduate of Banking and Finance with a diverse professional background spanning marketing, administration, and customer service. He has held several roles across various sectors and is a leadership enthusiast with a strong passion for social work, committed to making positive impacts in his community.",
-    ],
+    // [KHI] Bio and headshot to be supplied; placeholder portrait until then.
+    bio: [],
   },
   {
     name: "Ezinne Janefrances Nwonu",
