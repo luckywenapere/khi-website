@@ -40,7 +40,7 @@ export function AnimatedCounter({
   return (
     <span ref={ref} className="font-mono tabular-nums">
       {prefix}
-      {display}
+      {display.toLocaleString("en-US")}
       {suffix}
     </span>
   );

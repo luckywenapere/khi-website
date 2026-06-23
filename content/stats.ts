@@ -9,13 +9,15 @@ export type Stat = {
 };
 
 /**
- * [REVIEW] Verified figures from the legacy site. "Locations" has been dropped
- * (it depended on the fake "Other Locations" addresses, now removed). Each
- * figure still needs an "as of <date>" + source to be fully credible ([KHI]) —
- * rendered without one for now rather than inventing a date.
+ * Headline impact figures (provided by KHI).
+ * [KHI] Each figure still needs an "as of <date>" + source to be fully
+ * credible; rendered without one for now rather than inventing a date.
+ * [KHI] Confirm the 26 "Locations" are genuine communities/areas served.
  */
 export const stats: Stat[] = [
-  { value: 4, suffix: "+", label: "Projects" },
-  { value: 5, suffix: "+", label: "Partners" },
-  { value: 5, prefix: "₦", suffix: "M+", label: "Funds raised" },
+  { value: 18, label: "Projects" },
+  { value: 11, label: "Partners" },
+  { value: 26, label: "Locations" },
+  { value: 28, prefix: "₦", suffix: "M+", label: "Funds raised" },
+  { value: 9000, label: "Impacts" },
 ];
