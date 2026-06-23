@@ -105,7 +105,7 @@ export function NewsletterForm() {
         </p>
       ) : (
         <p className="mt-2 text-xs text-muted-foreground">
-          Occasional updates. No spam — unsubscribe anytime.
+          Occasional updates. No spam, unsubscribe anytime.
         </p>
       )}
       {status === "error" ? (

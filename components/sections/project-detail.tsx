@@ -40,8 +40,8 @@ export function ProjectDetail({ project }: { project: Project }) {
     ? project.gallery!.map((image) => ({ src: image.src, alt: image.alt }))
     : [
         { alt: project.imageAlt },
-        { alt: `${project.title} — additional photo` },
-        { alt: `${project.title} — additional photo` },
+        { alt: `${project.title} additional photo` },
+        { alt: `${project.title} additional photo` },
       ];
 
   return (
@@ -97,7 +97,7 @@ export function ProjectDetail({ project }: { project: Project }) {
             <>
               Photos from this project.{" "}
               <span className="text-charcoal">
-                [KHI — real images to be confirmed.]
+                [KHI: real images to be confirmed.]
               </span>
             </>
           )}

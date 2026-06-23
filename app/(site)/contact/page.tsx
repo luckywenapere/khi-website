@@ -9,7 +9,7 @@ import { createMetadata } from "@/lib/seo";
 export const metadata = createMetadata({
   title: "Contact",
   description:
-    "Get in touch with Kind Humanitarian Initiative in Garki 2, Abuja — by message, email, or phone.",
+    "Get in touch with Kind Humanitarian Initiative in Garki 2, Abuja, by message, email, or phone.",
   path: "/contact",
 });
 

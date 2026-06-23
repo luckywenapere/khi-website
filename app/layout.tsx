@@ -35,7 +35,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — Practical kindness in Abuja, Nigeria`,
+    default: `${site.name}: Practical kindness in Abuja, Nigeria`,
     template: `%s · ${site.shortName}`,
   },
   description: site.description,

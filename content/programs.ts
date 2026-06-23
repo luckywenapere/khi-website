@@ -22,7 +22,7 @@ export const programs: readonly Program[] = [
     title: "Education & Scholarships",
     summary: "School fees, exam support, and learning help.",
     description:
-      "Removing the cost barriers that keep able students out of school — from exam fees to learning support.",
+      "Removing the cost barriers that keep able students out of school, from exam fees to learning support.",
   },
   {
     slug: "health-hygiene",

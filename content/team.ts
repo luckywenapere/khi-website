@@ -66,7 +66,7 @@ export const team: readonly Person[] = [
     role: "Communications Lead",
     photo: "/images/people/blessing-scaled.jpg",
     bio: [
-      "Tor Mwuese Blessing is a highly motivated and passionate individual with a background in Business Administration (HND) and years of experience in education — imparting knowledge and inspiring growth.",
+      "Tor Mwuese Blessing is a highly motivated and passionate individual with a background in Business Administration (HND) and years of experience in education, imparting knowledge and inspiring growth.",
       "She also has experience in community development and social-media management, leveraging her skills to facilitate events, design graphics, and handle social-media platforms. As a dedicated volunteer, she is committed to creating positive impact and driving change.",
       "She completed a one-year leadership training program at the Centre for Leadership, Strategy and Development, enhancing her leadership skills and capacity to drive positive change.",
     ],
@@ -93,7 +93,7 @@ export const team: readonly Person[] = [
     photo: "/images/people/anulika.jpg",
     bio: [
       "Renowned lawyer, mental-health advocate, social entrepreneur, HR expert, and founder/Executive Director of Kenvic Global Foundation. With over a decade of experience and a robust academic background in law (LLB, BL) and international human-resource management (Executive Master's), Anulika Njemanze has established herself as a force for transformative change.",
-      "Her passion for humanity, growth, and progress inspired Kenvic Global Foundation, dedicated to restoring lives and hope through advocacy and empowerment across education, child-rights protection, nutrition, leadership development, and empowerment schemes. Its flagship programs — the Leadership and Empowerment Conference (LEC) and the Women in Agriculture Community Training Initiative (WACTI) — build skills, confidence, and economic opportunity.",
+      "Her passion for humanity, growth, and progress inspired Kenvic Global Foundation, dedicated to restoring lives and hope through advocacy and empowerment across education, child-rights protection, nutrition, leadership development, and empowerment schemes. Its flagship programs, the Leadership and Empowerment Conference (LEC) and the Women in Agriculture Community Training Initiative (WACTI), build skills, confidence, and economic opportunity.",
       "She is also a serial entrepreneur and founder of POTA NIG LTD, a brand promoting local agricultural produce to help alleviate hunger.",
     ],
   },

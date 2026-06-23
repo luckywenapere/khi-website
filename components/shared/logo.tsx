@@ -22,7 +22,7 @@ export function Logo({ className, imgClassName }: LogoProps) {
   return (
     <Link
       href="/"
-      aria-label={`${site.name} — home`}
+      aria-label={`${site.name} home`}
       className={cn(
         "inline-flex items-center rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring",
         className,

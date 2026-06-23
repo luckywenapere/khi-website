@@ -12,7 +12,7 @@ export type Milestone = { title: string; date: string; body: string };
 
 export const about = {
   intro:
-    "At Kind Humanitarian Initiative, we create lasting change in the lives of vulnerable communities — combating hunger, promoting education, and empowering individuals through sustainable programs that foster self-sufficiency and social development.",
+    "At Kind Humanitarian Initiative, we create lasting change in the lives of vulnerable communities: combating hunger, promoting education, and empowering individuals through sustainable programs that foster self-sufficiency and social development.",
 
   vision:
     "To create a world where everyone has access to food, quality education, healthcare, and gender equality.",

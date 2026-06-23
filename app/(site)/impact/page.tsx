@@ -10,7 +10,7 @@ import { createMetadata } from "@/lib/seo";
 export const metadata = createMetadata({
   title: "Impact",
   description:
-    "The proof behind KHI's work — the numbers, outcomes, and a commitment to transparency.",
+    "The proof behind KHI's work, the numbers, outcomes, and a commitment to transparency.",
   path: "/impact",
 });
 
@@ -20,7 +20,7 @@ export default function ImpactPage() {
       <PageHeader
         eyebrow="Impact"
         title="Our impact"
-        intro="We measure our work by what changes for the people we serve. Here is what we can show so far — with figures we are still dating and sourcing for full credibility."
+        intro="We measure our work by what changes for the people we serve. Here is what we can show so far, with figures we are still dating and sourcing for full credibility."
       />
 
       <StatBand />

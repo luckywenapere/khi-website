@@ -10,7 +10,7 @@ import { createMetadata } from "@/lib/seo";
 export const metadata = createMetadata({
   title: "What We Do",
   description:
-    "KHI's four programs — education and scholarships, health and hygiene, food relief, and youth leadership — and the projects within each.",
+    "KHI's four programs (education and scholarships, health and hygiene, food relief, and youth leadership) and the projects within each.",
   path: "/programs",
 });
 
@@ -24,7 +24,7 @@ export default function ProgramsPage() {
       <PageHeader
         eyebrow="What We Do"
         title="Our programs"
-        intro="KHI works across four ongoing areas. Each program holds specific, time-bound projects — the concrete work that delivers it."
+        intro="KHI works across four ongoing areas. Each program holds specific, time-bound projects, the concrete work that delivers it."
       />
 
       <Section>

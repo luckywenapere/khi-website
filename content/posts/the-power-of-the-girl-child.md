@@ -23,7 +23,7 @@ When a girl is given the chance to learn, she becomes a catalyst for change. The
 
 * **Improved Health Outcomes:** Educated women are more likely to have smaller, healthier families. They are better informed about nutrition and healthcare, leading to lower infant and maternal mortality rates.
 * **Economic Growth:** Educated women have a greater chance of escaping poverty. When they enter the workforce, they contribute to the economy, boosting national productivity and prosperity. A World Bank study estimates that the lack of educational opportunities for girls costs countries trillions of dollars in lost productivity and earnings.
-* **Breaking the Cycle of Poverty:** As an African proverb wisely states, “If you educate a boy, you educate one person. If you educate a girl, you educate a family—and a whole nation.” An educated mother is far more likely to ensure her children, both boys and girls, also receive an education.
+* **Breaking the Cycle of Poverty:** As an African proverb wisely states, “If you educate a boy, you educate one person. If you educate a girl, you educate a family, and a whole nation.” An educated mother is far more likely to ensure her children, both boys and girls, also receive an education.
 * **Empowered Voices:** Education provides girls with the confidence and skills to participate in society, advocate for their rights, and become leaders in their communities.
 
 **Real-Life Stories of Resilience and Triumph**

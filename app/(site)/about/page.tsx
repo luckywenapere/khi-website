@@ -13,7 +13,7 @@ import { createMetadata } from "@/lib/seo";
 export const metadata = createMetadata({
   title: "About",
   description:
-    "Who Kind Humanitarian Initiative is — our vision and mission, our story, our values, and the people behind the work.",
+    "Who Kind Humanitarian Initiative is: our vision and mission, our story, our values, and the people behind the work.",
   path: "/about",
 });
 

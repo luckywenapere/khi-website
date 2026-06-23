@@ -15,7 +15,7 @@ export default function StoriesPage() {
       <PageHeader
         eyebrow="Stories"
         title="Stories"
-        intro="Articles and updates from our work — on education, girls, and the communities we serve."
+        intro="Articles and updates from our work on education, girls, and the communities we serve."
       />
       <StoryGrid showHeader={false} />
     </>

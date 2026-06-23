@@ -153,7 +153,7 @@ export function VolunteerForm() {
       <Field
         id="v-message"
         label="Message"
-        hint="Optional — tell us a little about yourself."
+        hint="Optional: tell us a little about yourself."
         error={errors.message?.message}
       >
         <Textarea

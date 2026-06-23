@@ -7,7 +7,7 @@ import { createMetadata } from "@/lib/seo";
 export const metadata = createMetadata({
   title: "Volunteer",
   description:
-    "Lend your time and skills to KHI's programs across Abuja — tutoring, mentoring, distribution days, and more.",
+    "Lend your time and skills to KHI's programs across Abuja: tutoring, mentoring, distribution days, and more.",
   path: "/get-involved/volunteer",
 });
 
@@ -29,7 +29,7 @@ export default function VolunteerPage() {
             <h2 className="text-2xl">Why volunteer</h2>
             <p className="mt-4 text-muted-foreground">
               KHI runs on people who give their time. Whether you can help once
-              or regularly, there is a place for your skills — across education,
+              or regularly, there is a place for your skills across education,
               health and hygiene, food relief, and youth leadership.
             </p>
             <PlaceholderImage

@@ -49,7 +49,7 @@ export function TransparencyBlock() {
             <dd className="mt-1 font-sans text-lg font-semibold text-charcoal">
               TBD{" "}
               <span className="text-sm font-normal text-muted-foreground">
-                [KHI — to confirm]
+                [KHI: to confirm]
               </span>
             </dd>
           </div>
@@ -73,7 +73,7 @@ export function TransparencyBlock() {
           We are committed to transparency and accountability. The breakdown
           below shows how donations are put to work.{" "}
           <span className="text-charcoal">
-            [KHI — exact percentages to be confirmed.]
+            [KHI: exact percentages to be confirmed.]
           </span>
         </p>
         <ul className="mt-6 space-y-3">
@@ -87,7 +87,7 @@ export function TransparencyBlock() {
                 <p className="text-sm text-muted-foreground">{item.note}</p>
               </div>
               <span className="font-mono text-sm text-muted-foreground">
-                — % [KHI]
+                TBD% [KHI]
               </span>
             </li>
           ))}
@@ -104,7 +104,7 @@ export function TransparencyBlock() {
           />
           <p className="text-sm text-muted-foreground">
             Annual reports and financial statements will be published here.{" "}
-            <span className="text-charcoal">[KHI — first report pending.]</span>
+            <span className="text-charcoal">[KHI: first report pending.]</span>
           </p>
         </div>
       </div>

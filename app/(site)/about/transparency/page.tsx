@@ -7,7 +7,7 @@ import { createMetadata } from "@/lib/seo";
 export const metadata = createMetadata({
   title: "Transparency & financials",
   description:
-    "How Kind Humanitarian Initiative is governed and where donations go — registration facts, allocation, and reports.",
+    "How Kind Humanitarian Initiative is governed and where donations go: registration facts, allocation, and reports.",
   path: "/about/transparency",
 });
 

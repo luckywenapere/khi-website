@@ -62,7 +62,7 @@ export function ContactForm() {
         className="rounded-xl border border-border bg-accent p-6 outline-none"
       >
         <p className="font-sans text-lg font-semibold text-charcoal">
-          Thank you — your message has been sent.
+          Thank you. Your message has been sent.
         </p>
         <p className="mt-2 text-sm text-muted-foreground">
           We will be in touch as soon as we can.

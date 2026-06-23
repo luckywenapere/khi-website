@@ -10,7 +10,7 @@ export const home = {
   hero: {
     // Default headline (Phase 2 brief §3.1).
     headline:
-      "Practical help for communities in Abuja — scholarships, hygiene, food relief, and leadership.",
+      "Practical help for communities in Abuja: scholarships, hygiene, food relief, and leadership.",
     // Alternate, scholarship-led headline — swap in by replacing `headline` above:
     // "We paid the final-year exam fees for 20 students. Here is what happened next."
     subhead: site.mission,
@@ -24,7 +24,7 @@ export const home = {
 
   mission: {
     lead: "Kind Humanitarian Initiative brings practical, dignified help to people in and around Abuja.",
-    body: "We concentrate on four areas where small, well-run efforts change lives — paying school fees, protecting health and dignity, feeding families through hard seasons, and building the next generation of leaders.",
+    body: "We concentrate on four areas where small, well-run efforts change lives: paying school fees, protecting health and dignity, feeding families through hard seasons, and building the next generation of leaders.",
   },
 
   impact: {
@@ -33,7 +33,7 @@ export const home = {
     statement:
       "Final-year exam fees paid for 20 students who would otherwise have dropped out.",
     support:
-      "Through the KHI Scholarship, twenty SSS3 students sat their final exams — keeping their path to graduation open.",
+      "Through the KHI Scholarship, twenty SSS3 students sat their final exams, keeping their path to graduation open.",
     // [KHI] Optional: a consented beneficiary quote can be added here later.
     // Phase 3b §6: genuine event photo.
     image: "/images/home/P1060450.jpg",

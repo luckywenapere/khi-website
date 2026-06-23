@@ -28,13 +28,13 @@ export const partners: readonly Partner[] = [
     slug: "kenvic-global-foundation",
     name: "Kenvic Global Foundation (KGF)",
     description:
-      "A non-profit that empowers marginalized groups — especially women and children — through education, skills development, and leadership growth.",
+      "A non-profit that empowers marginalized groups, especially women and children, through education, skills development, and leadership growth.",
   },
   {
     slug: "hopeful-hands-for-help",
     name: "Hopeful Hands for Help Initiative",
     description:
-      "Dedicated to inspiring hope and transforming lives through sustainable development, education, healthcare, and social justice — empowering communities and advocating for vulnerable populations.",
+      "Dedicated to inspiring hope and transforming lives through sustainable development, education, healthcare, and social justice, empowering communities and advocating for vulnerable populations.",
   },
 ] as const;
 

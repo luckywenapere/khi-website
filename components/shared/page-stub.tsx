@@ -22,7 +22,7 @@ export function PageStub({ eyebrow, title, description }: PageStubProps) {
       ) : null}
       <h1 className="mt-3">{title}</h1>
       <p className="text-body-lg mt-6 text-muted-foreground">
-        {description ?? "Coming together — content in a later phase."}
+        {description ?? "Coming together, content in a later phase."}
       </p>
       <div
         className="throughline mt-8 h-1 w-24 rounded-full"

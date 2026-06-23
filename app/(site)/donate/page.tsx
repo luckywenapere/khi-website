@@ -20,7 +20,7 @@ export default function DonatePage() {
       <PageHeader
         eyebrow="Donate"
         title="Support our work"
-        intro="Your gift funds practical help — exam fees, hygiene kits, food packs, and youth leadership — for communities in and around Abuja."
+        intro="Your gift funds practical help (exam fees, hygiene kits, food packs, and youth leadership) for communities in and around Abuja."
         src="/images/donate/girl-water.jpg"
         imageAlt="A child carrying water in a Nigerian community"
         priority

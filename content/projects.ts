@@ -33,7 +33,7 @@ export type Project = {
 export const projects: readonly Project[] = [
   {
     slug: "khi-scholarship-cohort-1",
-    title: "KHI Scholarship — Cohort 1",
+    title: "KHI Scholarship: Cohort 1",
     programSlug: "education-scholarships",
     status: "completed",
     summary:
@@ -46,35 +46,35 @@ export const projects: readonly Project[] = [
     gallery: [
       {
         src: "/images/projects/khi-scholarship-cohort-1/IMG-20250208-WA0000.jpg",
-        alt: "KHI Scholarship project — photo",
+        alt: "KHI Scholarship project photo",
       },
       {
         src: "/images/projects/khi-scholarship-cohort-1/IMG-20250224-WA0017.jpg",
-        alt: "KHI Scholarship project — photo",
+        alt: "KHI Scholarship project photo",
       },
       {
         src: "/images/projects/khi-scholarship-cohort-1/IMG-20250227-WA0015.jpg",
-        alt: "KHI Scholarship project — photo",
+        alt: "KHI Scholarship project photo",
       },
       {
         src: "/images/projects/khi-scholarship-cohort-1/IMG-20250304-WA0009.jpg",
-        alt: "KHI Scholarship project — photo",
+        alt: "KHI Scholarship project photo",
       },
       {
         src: "/images/projects/khi-scholarship-cohort-1/school-1.jpg",
-        alt: "KHI Scholarship — school visit photo",
+        alt: "KHI Scholarship school-visit photo",
       },
       {
         src: "/images/projects/khi-scholarship-cohort-1/school-2-1.jpg",
-        alt: "KHI Scholarship — school visit photo",
+        alt: "KHI Scholarship school-visit photo",
       },
       {
         src: "/images/projects/khi-scholarship-cohort-1/school-3.jpg",
-        alt: "KHI Scholarship — school visit photo",
+        alt: "KHI Scholarship school-visit photo",
       },
       {
         src: "/images/projects/khi-scholarship-cohort-1/school-4-1.jpg",
-        alt: "KHI Scholarship — school visit photo",
+        alt: "KHI Scholarship school-visit photo",
       },
     ],
     featured: true,
@@ -96,23 +96,23 @@ export const projects: readonly Project[] = [
     gallery: [
       {
         src: "/images/projects/iwd-menstrual-hygiene/IMG-20250318-WA0298.jpg",
-        alt: "International Women's Day program — photo",
+        alt: "International Women's Day program photo",
       },
       {
         src: "/images/projects/iwd-menstrual-hygiene/IMG-20250320-WA0181.jpg",
-        alt: "International Women's Day program — photo",
+        alt: "International Women's Day program photo",
       },
       {
         src: "/images/projects/iwd-menstrual-hygiene/IMG-20250320-WA0182.jpg",
-        alt: "International Women's Day program — photo",
+        alt: "International Women's Day program photo",
       },
       {
         src: "/images/projects/iwd-menstrual-hygiene/IMG-20250320-WA0183.jpg",
-        alt: "International Women's Day program — photo",
+        alt: "International Women's Day program photo",
       },
       {
         src: "/images/projects/iwd-menstrual-hygiene/IMG-20250320-WA0184.jpg",
-        alt: "International Women's Day program — photo",
+        alt: "International Women's Day program photo",
       },
     ],
   },
@@ -147,15 +147,15 @@ export const projects: readonly Project[] = [
     gallery: [
       {
         src: "/images/projects/kenvic-leadership-conference/kenvic.jpg",
-        alt: "Kenvic leadership conference — photo",
+        alt: "Kenvic leadership conference photo",
       },
       {
         src: "/images/projects/kenvic-leadership-conference/kenvic-1.jpg",
-        alt: "Kenvic leadership conference — photo",
+        alt: "Kenvic leadership conference photo",
       },
       {
         src: "/images/projects/kenvic-leadership-conference/kenvic-3.jpg",
-        alt: "Kenvic leadership conference — photo",
+        alt: "Kenvic leadership conference photo",
       },
     ],
     featured: true,
@@ -176,11 +176,11 @@ export const projects: readonly Project[] = [
     gallery: [
       {
         src: "/images/projects/pads-and-pals/menstruation.jpg",
-        alt: "Pads & Pals menstrual-hygiene project — photo",
+        alt: "Pads & Pals menstrual-hygiene project photo",
       },
       {
         src: "/images/projects/pads-and-pals/menstruation-2.jpg",
-        alt: "Pads & Pals menstrual-hygiene project — photo",
+        alt: "Pads & Pals menstrual-hygiene project photo",
       },
     ],
     featured: true,

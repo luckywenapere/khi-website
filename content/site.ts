@@ -23,7 +23,7 @@ export const site = {
    *  Faithful to the live site's hero copy. The formal vision + mission
    *  statements live on the About page (content/about.ts). */
   mission:
-    "We build sustainable systems that foster self-sufficiency and growth — empowering less-privileged communities in Abuja to thrive.",
+    "We build sustainable systems that foster self-sufficiency and growth, empowering less-privileged communities in Abuja to thrive.",
   /** Default meta description (page-level descriptions override this) */
   description:
     "Kind Humanitarian Initiative is an Abuja, Nigeria nonprofit working in education and scholarships, health and hygiene, food relief, and youth leadership.",
