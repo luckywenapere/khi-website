@@ -1,26 +1,277 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
+/* Light-only site: dark: utilities in shadcn components are scoped to an
+   explicit .dark class that we never add, so they stay inert. */
+@custom-variant dark (&:is(.dark *));
+
+/* =====================================================================
+   KHI brand tokens — single source of truth (Phase 1 brief §2)
+   Sampled from the KHI logo. Brand blue takes white text; blue TEXT/links
+   use blue-700; sky-cyan is accent/gradient only, never text.
+   ===================================================================== */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand blue (the "K" and the arc) */
+  --blue-50: #eef3fc;
+  --blue-100: #d9e4f8;
+  --blue-200: #b5c9f0;
+  --blue-300: #8ba9e4;
+  --blue-400: #5e84d4;
+  --blue-500: #426ec6; /* brand — fills/buttons; white text passes AA (~4.9:1) */
+  --blue-600: #345bae; /* hover */
+  --blue-700: #2a4c95; /* TEXT/links on white (~8:1) */
+  --blue-800: #213a73;
+
+  /* Sky-cyan (bright end of the logo arc) — accents + gradient ONLY */
+  --sky-400: #38b6ee;
+  --sky-500: #00b0f2;
+
+  /* Signature: the logo's blue→cyan arc, reused sparingly across the site */
+  --gradient-brand: linear-gradient(
+    120deg,
+    #345bae 0%,
+    #426ec6 40%,
+    #00b0f2 100%
+  );
+
+  /* Neutrals */
+  --white: #ffffff;
+  --gray-50: #f8f9fa;
+  --gray-100: #f1f3f5;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-500: #868e96;
+  --gray-700: #495057;
+  --charcoal: #1f2328; /* body text */
+  --cream: #f7f6ec; /* warm off-white from the logo badge; optional surface */
+
+  /* ===== shadcn semantic tokens → mapped to brand (brief §2.2) ===== */
+  --background: var(--white);
+  --foreground: var(--charcoal);
+  --card: var(--white);
+  --card-foreground: var(--charcoal);
+  --popover: var(--white);
+  --popover-foreground: var(--charcoal);
+  --muted: var(--gray-100);
+  --muted-foreground: var(--gray-700);
+  --border: var(--gray-200);
+  --input: var(--gray-200);
+  --primary: var(--blue-500);
+  --primary-foreground: var(--white);
+  --secondary: var(--gray-100);
+  --secondary-foreground: var(--charcoal);
+  --accent: var(--blue-50);
+  --accent-foreground: var(--blue-700);
+  --ring: var(--blue-500);
+  --destructive: #b42318; /* accessible error red (white text passes AA) */
+  --destructive-foreground: var(--white);
+
+  /* Radius scale (brief §2.4): sm 8 · md 12 · lg 16 · xl 24 */
+  --radius: 0.75rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  /* Soft, layered shadows (brief §2.4) */
+  --shadow-sm: 0 1px 2px rgba(31, 35, 40, 0.06);
+  --shadow-md: 0 4px 16px rgba(31, 35, 40, 0.06);
+  --shadow-lg: 0 12px 32px rgba(31, 35, 40, 0.08);
+
+  /* Motion (brief §2.4) */
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-entrance: 400ms;
+  --ease-entrance: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* =====================================================================
+   Tailwind theme wiring — expose tokens as utilities
+   ===================================================================== */
 @theme inline {
+  /* Semantic colours (consumed by shadcn components) */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  /* Brand colour scales for design use (e.g. text-blue-700, bg-blue-50) */
+  --color-blue-50: var(--blue-50);
+  --color-blue-100: var(--blue-100);
+  --color-blue-200: var(--blue-200);
+  --color-blue-300: var(--blue-300);
+  --color-blue-400: var(--blue-400);
+  --color-blue-500: var(--blue-500);
+  --color-blue-600: var(--blue-600);
+  --color-blue-700: var(--blue-700);
+  --color-blue-800: var(--blue-800);
+  --color-sky-400: var(--sky-400);
+  --color-sky-500: var(--sky-500);
+  --color-charcoal: var(--charcoal);
+  --color-cream: var(--cream);
+
+  /* Brand neutral scale — overrides Tailwind defaults with KHI greys */
+  --color-gray-50: var(--gray-50);
+  --color-gray-100: var(--gray-100);
+  --color-gray-200: var(--gray-200);
+  --color-gray-300: var(--gray-300);
+  --color-gray-500: var(--gray-500);
+  --color-gray-700: var(--gray-700);
+
+  /* Fonts (next/font sets the raw vars on <html>) */
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-ibm-plex-mono);
+
+  /* Radius */
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+
+  /* Shadows */
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+
+  /* Content container widths (brief §2.4) */
+  --container-content: 75rem; /* 1200px */
+  --container-wide: 82.5rem; /* 1320px */
+  --container-prose: 45rem; /* 720px */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* =====================================================================
+   Base layer — typography + global resets
+   ===================================================================== */
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Display / heading face — Fraunces, optical sizing on (brief §2.3) */
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-fraunces), ui-serif, Georgia, serif;
+    font-optical-sizing: auto;
+    color: var(--charcoal);
+    text-wrap: balance;
+  }
+
+  h1 {
+    font-size: clamp(2.25rem, 4vw, 3.25rem);
+    line-height: 1.1;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+
+  h2 {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    line-height: 1.15;
+    font-weight: 500;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    line-height: 1.3;
+    font-weight: 500;
+  }
+
+  /* Visible focus ring everywhere, driven by the --ring token */
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* =====================================================================
+   Utilities — typography + brand motif not covered by elements
+   ===================================================================== */
+@layer utilities {
+  /* Largest display size, used above the fold (brief §2.3) */
+  .text-display {
+    font-family: var(--font-fraunces), ui-serif, Georgia, serif;
+    font-optical-sizing: auto;
+    font-size: clamp(2.75rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    font-weight: 500;
+    text-wrap: balance;
+  }
+
+  /* Small uppercase eyebrow label (brief §2.3) */
+  .text-overline {
+    font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  /* Body large */
+  .text-body-lg {
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+
+  /* The signature blue→cyan throughline — use sparingly as an accent line. */
+  .throughline {
+    background-image: var(--gradient-brand);
+  }
+
+  .text-gradient-brand {
+    background-image: var(--gradient-brand);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+/* =====================================================================
+   Reduced motion — disable all entrance/transition motion (brief §2.4)
+   Framer Motion primitives also gate on useReducedMotion(); this is the
+   CSS safety net for component (accordion/sheet) and hover animations.
+   ===================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

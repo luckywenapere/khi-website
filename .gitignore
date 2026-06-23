@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Lighthouse reports
+.lh/
+
+# Raw WordPress media export — 192MB staging dump (not part of the app)
+/docs/wp-export/

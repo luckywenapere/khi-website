@@ -1,0 +1,166 @@
+# Image triage — WordPress media (155 attachments)
+
+- Template/demo (DISCARD): 38
+- Fake "Other Locations" imagery (DISCARD): 4
+- Likely real KHI photos (REVIEW & keep): 113
+
+## Likely real KHI photos — review and map to content
+- `food` — https://khinitiative.org/wp-content/uploads/2019/10/food.jpg
+- `founder` — https://khinitiative.org/wp-content/uploads/2019/11/founder.jpg
+- `volunteers` — https://khinitiative.org/wp-content/uploads/2019/11/volunteers.jpg
+- `volunteer-team` — https://khinitiative.org/wp-content/uploads/2021/03/volunteer-team.jpg
+- `fetching-water` — https://khinitiative.org/wp-content/uploads/2025/03/fetching-water.jpg
+- `happy-children` — https://khinitiative.org/wp-content/uploads/2025/03/happy-children.jpg
+- `happiness` — https://khinitiative.org/wp-content/uploads/2025/03/happiness.png
+- `african-woman` — https://khinitiative.org/wp-content/uploads/2025/04/african-woman-scaled.jpg
+- `african-woman` — https://khinitiative.org/wp-content/uploads/2025/04/african-woman-1.jpg
+- `pexels-mdadilahnaf-19935567` — https://khinitiative.org/wp-content/uploads/2025/04/pexels-mdadilahnaf-19935567.jpg
+- `african-farmers` — https://khinitiative.org/wp-content/uploads/2025/04/african-farmers.jpg
+- `african-woman - 2` — https://khinitiative.org/wp-content/uploads/2025/04/african-woman-2.jpg
+- `happy-children-2` — https://khinitiative.org/wp-content/uploads/2025/04/happy-children-2.jpg
+- `school-child` — https://khinitiative.org/wp-content/uploads/2025/04/school-child.jpg
+- `washing-hands` — https://khinitiative.org/wp-content/uploads/2025/04/washing-hands.jpg
+- `happy-farmer` — https://khinitiative.org/wp-content/uploads/2025/04/happy-farmer.jpg
+- `man-selling` — https://khinitiative.org/wp-content/uploads/2025/04/man-selling.jpg
+- `giving-children` — https://khinitiative.org/wp-content/uploads/2025/04/giving-children.jpg
+- `donate-1` — https://khinitiative.org/wp-content/uploads/2025/04/donate-1.jpg
+- `children-classroom` — https://khinitiative.org/wp-content/uploads/2025/04/children-classroom.jpg
+- `happy-children-3` — https://khinitiative.org/wp-content/uploads/2025/04/happy-children-3.jpg
+- `pexels-aliyu-bashir-1725914957-27998594` — https://khinitiative.org/wp-content/uploads/2025/04/pexels-aliyu-bashir-1725914957-27998594.jpg
+- `lady-working` — https://khinitiative.org/wp-content/uploads/2025/04/lady-working.jpg
+- `man-working` — https://khinitiative.org/wp-content/uploads/2025/04/man-working.jpg
+- `baby-health` — https://khinitiative.org/wp-content/uploads/2025/04/baby-health.jpg
+- `woman-selling` — https://khinitiative.org/wp-content/uploads/2025/04/woman-selling.jpg
+- `school-building` — https://khinitiative.org/wp-content/uploads/2025/04/school-building.jpg
+- `woman-writing` — https://khinitiative.org/wp-content/uploads/2025/04/woman-writing.jpg
+- `central-mosque` — https://khinitiative.org/wp-content/uploads/2025/04/central-mosque.jpg
+- `girl-water` — https://khinitiative.org/wp-content/uploads/2025/04/girl-water.jpg
+- `smiling-child` — https://khinitiative.org/wp-content/uploads/2025/04/smiling-child.jpg
+- `child-water` — https://khinitiative.org/wp-content/uploads/2025/04/child-water.jpg
+- `food-market` — https://khinitiative.org/wp-content/uploads/2025/04/food-market.jpg
+- `khi-logo-1` — https://khinitiative.org/wp-content/uploads/2025/04/khi-logo-1.png
+- `khi-logo-2` — https://khinitiative.org/wp-content/uploads/2025/04/khi-logo-2.png
+- `cropped-khi-logo-2.png` — https://khinitiative.org/wp-content/uploads/2025/04/cropped-khi-logo-2.png
+- `african-farmer-1` — https://khinitiative.org/wp-content/uploads/2025/04/african-farmer-1.png
+- `school-2` — https://khinitiative.org/wp-content/uploads/2025/04/school-2.jpg
+- `IMG-20250320-WA0184` — https://khinitiative.org/wp-content/uploads/2025/04/IMG-20250320-WA0184.jpg
+- `school-4` — https://khinitiative.org/wp-content/uploads/2025/04/school-4.jpg
+- `school-5` — https://khinitiative.org/wp-content/uploads/2025/04/school-5.jpg
+- `school-6` — https://khinitiative.org/wp-content/uploads/2025/04/school-6.jpg
+- `20250205_111249` — https://khinitiative.org/wp-content/uploads/2025/04/20250205_111249-scaled.jpg
+- `20250206_093514` — https://khinitiative.org/wp-content/uploads/2025/04/20250206_093514-scaled.jpg
+- `20250304_103256` — https://khinitiative.org/wp-content/uploads/2025/04/20250304_103256-scaled.jpg
+- `20250304_112339` — https://khinitiative.org/wp-content/uploads/2025/04/20250304_112339-scaled.jpg
+- `20250304_112452` — https://khinitiative.org/wp-content/uploads/2025/04/20250304_112452-scaled.jpg
+- `IMG-20250208-WA0000` — https://khinitiative.org/wp-content/uploads/2025/04/IMG-20250208-WA0000.jpg
+- `IMG-20250224-WA0017` — https://khinitiative.org/wp-content/uploads/2025/04/IMG-20250224-WA0017.jpg
+- `IMG-20250227-WA0015` — https://khinitiative.org/wp-content/uploads/2025/04/IMG-20250227-WA0015.jpg
+- `IMG-20250304-WA0009` — https://khinitiative.org/wp-content/uploads/2025/04/IMG-20250304-WA0009.jpg
+- `school-1` — https://khinitiative.org/wp-content/uploads/2025/04/school-1.jpg
+- `school-2` — https://khinitiative.org/wp-content/uploads/2025/04/school-2-1.jpg
+- `school-3` — https://khinitiative.org/wp-content/uploads/2025/04/school-3.jpg
+- `school-4` — https://khinitiative.org/wp-content/uploads/2025/04/school-4-1.jpg
+- `IMG-20250320-WA0183` — https://khinitiative.org/wp-content/uploads/2025/04/IMG-20250320-WA0183.jpg
+- `IMG-20250320-WA0184` — https://khinitiative.org/wp-content/uploads/2025/04/IMG-20250320-WA0184-1.jpg
+- `IMG-20250318-WA0298` — https://khinitiative.org/wp-content/uploads/2025/04/IMG-20250318-WA0298.jpg
+- `IMG-20250320-WA0181` — https://khinitiative.org/wp-content/uploads/2025/04/IMG-20250320-WA0181.jpg
+- `IMG-20250320-WA0182` — https://khinitiative.org/wp-content/uploads/2025/04/IMG-20250320-WA0182.jpg
+- `menstruation` — https://khinitiative.org/wp-content/uploads/2025/04/menstruation.jpg
+- `menstruation-2` — https://khinitiative.org/wp-content/uploads/2025/04/menstruation-2.jpg
+- `kenvic` — https://khinitiative.org/wp-content/uploads/2025/04/kenvic.jpg
+- `kenvic` — https://khinitiative.org/wp-content/uploads/2025/04/kenvic-1.jpg
+- `487691683_18077363203689143_5935401722804834561_n` — https://khinitiative.org/wp-content/uploads/2025/04/487691683_18077363203689143_5935401722804834561_n.jpg
+- `488368810_18077458573689143_5797451484621136337_n` — https://khinitiative.org/wp-content/uploads/2025/04/488368810_18077458573689143_5797451484621136337_n.jpg
+- `489760981_18077876092689143_4782598486767479375_n` — https://khinitiative.org/wp-content/uploads/2025/04/489760981_18077876092689143_4782598486767479375_n.jpg
+- `khi-logo-3` — https://khinitiative.org/wp-content/uploads/2025/04/khi-logo-3.png
+- `cropped-khi-logo-3.png` — https://khinitiative.org/wp-content/uploads/2025/04/cropped-khi-logo-3.png
+- `kenvic-3` — https://khinitiative.org/wp-content/uploads/2025/04/kenvic-3.jpg
+- `IMG-20250408-WA0078` — https://khinitiative.org/wp-content/uploads/2025/04/IMG-20250408-WA0078.jpg
+- `IMG-20250408-WA0067` — https://khinitiative.org/wp-content/uploads/2025/04/IMG-20250408-WA0067.jpg
+- `IMG-20250408-WA0080` — https://khinitiative.org/wp-content/uploads/2025/04/IMG-20250408-WA0080.jpg
+- `IMG-20250408-WA0068` — https://khinitiative.org/wp-content/uploads/2025/04/IMG-20250408-WA0068.jpg
+- `IMG-20250408-WA0087` — https://khinitiative.org/wp-content/uploads/2025/04/IMG-20250408-WA0087.jpg
+- `IMG-20250408-WA0089` — https://khinitiative.org/wp-content/uploads/2025/04/IMG-20250408-WA0089.jpg
+- `IMG-20250408-WA0065` — https://khinitiative.org/wp-content/uploads/2025/04/IMG-20250408-WA0065.jpg
+- `IMG-20250408-WA0069` — https://khinitiative.org/wp-content/uploads/2025/04/IMG-20250408-WA0069.jpg
+- `IMG-20250408-WA0079` — https://khinitiative.org/wp-content/uploads/2025/04/IMG-20250408-WA0079.jpg
+- `margaret` — https://khinitiative.org/wp-content/uploads/2025/04/margaret.jpg
+- `children-learning` — https://khinitiative.org/wp-content/uploads/2025/04/children-learning.jpg
+- `IMG-20250423-WA0024` — https://khinitiative.org/wp-content/uploads/2025/05/IMG-20250423-WA0024.jpg
+- `IMG-20250423-WA0023` — https://khinitiative.org/wp-content/uploads/2025/05/IMG-20250423-WA0023.jpg
+- `team_11.jpg` — https://khinitiative.org/wp-content/uploads/2025/05/team_11.jpg
+- `dr-alabi` — https://khinitiative.org/wp-content/uploads/2025/05/dr-alabi.jpg
+- `mayowa` — https://khinitiative.org/wp-content/uploads/2025/05/mayowa.jpg
+- `folake` — https://khinitiative.org/wp-content/uploads/2025/05/folake.jpg
+- `blessing` — https://khinitiative.org/wp-content/uploads/2025/05/blessing-scaled.jpg
+- `ezinne` — https://khinitiative.org/wp-content/uploads/2025/05/ezinne.jpg
+- `philip` — https://khinitiative.org/wp-content/uploads/2025/05/philip.jpg
+- `anulika` — https://khinitiative.org/wp-content/uploads/2025/05/anulika.jpg
+- `ajani` — https://khinitiative.org/wp-content/uploads/2025/05/ajani.jpg
+- `1001136152` — https://khinitiative.org/wp-content/uploads/2025/05/1001136152.png
+- `Mask group (2)` — https://khinitiative.org/wp-content/uploads/2025/05/Mask-group-2.png
+- `Margaret (2)` — https://khinitiative.org/wp-content/uploads/2025/05/Margaret-2.jpg
+- `Ekpa Friday` — https://khinitiative.org/wp-content/uploads/2025/05/Ekpa-Friday.jpg
+- `omobola` — https://khinitiative.org/wp-content/uploads/2025/06/omobola.jpg
+- `oluwaseun` — https://khinitiative.org/wp-content/uploads/2025/06/oluwaseun.jpg
+- `P1060250` — https://khinitiative.org/wp-content/uploads/2025/06/P1060250.jpg
+- `P1060266` — https://khinitiative.org/wp-content/uploads/2025/06/P1060266.jpg
+- `P1060450` — https://khinitiative.org/wp-content/uploads/2025/06/P1060450.jpg
+- `P1060169` — https://khinitiative.org/wp-content/uploads/2025/06/P1060169.jpg
+- `P1060236` — https://khinitiative.org/wp-content/uploads/2025/06/P1060236.jpg
+- `P1060291` — https://khinitiative.org/wp-content/uploads/2025/06/P1060291.jpg
+- `1001371292_1` — https://khinitiative.org/wp-content/uploads/2025/07/1001371292_1.png
+- `1001371298` — https://khinitiative.org/wp-content/uploads/2025/07/1001371298.png
+- `1001371243` — https://khinitiative.org/wp-content/uploads/2025/07/1001371243.png
+- `1001371291` — https://khinitiative.org/wp-content/uploads/2025/07/1001371291.png
+- `1001371294` — https://khinitiative.org/wp-content/uploads/2025/07/1001371294.png
+- `1001371295` — https://khinitiative.org/wp-content/uploads/2025/07/1001371295.png
+- `P1060356` — https://khinitiative.org/wp-content/uploads/2025/07/P1060356.jpg
+- `girl-child` — https://khinitiative.org/wp-content/uploads/2025/09/girl-child.jpeg
+- `torbee2` — https://khinitiative.org/wp-content/uploads/2025/09/torbee2.jpg
+
+## Fake-location imagery — discard
+- `africa`
+- `australia`
+- `india`
+- `usa`
+
+## Template/demo assets — discard
+- `home-bg-1`
+- `home-bg-2`
+- `home-bg-3`
+- `breeding`
+- `clean-ocean`
+- `forest`
+- `fresh-water`
+- `wildlife`
+- `home-bg-4`
+- `home-bg-5`
+- `save-elephants`
+- `save-giraffes`
+- `save-gorillas`
+- `save-kiwi`
+- `save-panda`
+- `save-whales`
+- `bg-graphics2`
+- `bg-graphics`
+- `divider`
+- `gray-elephant`
+- `cta-bg-3`
+- `site-logo-white`
+- `favicon`
+- `demo-screenshot`
+- `save-elephants`
+- `save-giraffes`
+- `save-gorillas`
+- `save-kiwi`
+- `save-panda`
+- `save-whales`
+- `deer-icon`
+- `forest-icon`
+- `member-icon`
+- `dollar-icon`
+- `animal-welfare-black`
+- `Rectangle 1 (1)`
+- `Rectangle 1 (4)`
+- `heart-1`
