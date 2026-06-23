@@ -19,5 +19,5 @@ export const stats: Stat[] = [
   { value: 11, label: "Partners" },
   { value: 26, label: "Locations" },
   { value: 28, prefix: "₦", suffix: "M+", label: "Funds raised" },
-  { value: 9000, label: "Impacts" },
+  { value: 9000, label: "People reached" },
 ];
