@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { Container } from "@/components/layout/container";
+import { CtaBlock } from "@/components/sections/cta-block";
 import { ProjectDetail } from "@/components/sections/project-detail";
 import { Breadcrumbs } from "@/components/shared/breadcrumbs";
 import { getProgram } from "@/content/programs";
@@ -60,6 +61,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </div>
       </Container>
       <ProjectDetail project={project} />
+      <CtaBlock variant="photo" />
     </>
   );
 }

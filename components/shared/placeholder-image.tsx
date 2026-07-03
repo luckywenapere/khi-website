@@ -18,6 +18,12 @@ type PlaceholderImageProps = {
   priority?: boolean;
   /** Show the alt text as a caption chip in placeholder mode. */
   showLabel?: boolean;
+  /**
+   * Atmospheric/duplicative tile: renders alt="" so screen readers skip it
+   * (guardrail: ≤1–2 meaningful alts per collage; the rest decorative).
+   * `alt` stays required as documentation of the slot's intent.
+   */
+  decorative?: boolean;
 };
 
 /**
@@ -34,6 +40,7 @@ export function PlaceholderImage({
   sizes,
   priority,
   showLabel = true,
+  decorative = false,
 }: PlaceholderImageProps) {
   return (
     <div
@@ -45,7 +52,7 @@ export function PlaceholderImage({
       {src ? (
         <Image
           src={src}
-          alt={alt}
+          alt={decorative ? "" : alt}
           fill
           sizes={sizes}
           priority={priority}
@@ -53,8 +60,7 @@ export function PlaceholderImage({
         />
       ) : (
         <div
-          role="img"
-          aria-label={alt}
+          {...(decorative ? {} : { role: "img", "aria-label": alt })}
           className="throughline absolute inset-0 flex flex-col items-center justify-center gap-3 p-6"
         >
           <Icon className="size-9 text-white/90" aria-hidden="true" />

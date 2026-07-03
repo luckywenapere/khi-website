@@ -2,8 +2,10 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 import { Section } from "@/components/layout/section";
+import { CtaBlock } from "@/components/sections/cta-block";
 import { PageHeader } from "@/components/sections/page-header";
 import { PeopleGrid } from "@/components/sections/people-grid";
+import { PhotoCollage } from "@/components/sections/photo-collage";
 import { Timeline } from "@/components/sections/timeline";
 import { about } from "@/content/about";
 import { team } from "@/content/team";
@@ -42,24 +44,33 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      {/* Story */}
-      <Section spacing="compact" container="prose">
-        <h2>Our story</h2>
-        {about.story.map((section) => (
-          <div key={section.heading} className="mt-6">
-            <h3 className="font-sans text-lg font-semibold text-charcoal">
-              {section.heading}
-            </h3>
-            {section.paragraphs.map((paragraph, index) => (
-              <p
-                key={index}
-                className="mt-3 leading-relaxed text-muted-foreground"
-              >
-                {paragraph}
-              </p>
+      {/* Story — text beside a real-photo collage (v2) */}
+      <Section spacing="compact">
+        <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <h2>Our story</h2>
+            {about.story.map((section) => (
+              <div key={section.heading} className="mt-6">
+                <h3 className="font-sans text-lg font-semibold text-charcoal">
+                  {section.heading}
+                </h3>
+                {section.paragraphs.map((paragraph, index) => (
+                  <p
+                    key={index}
+                    className="mt-3 leading-relaxed text-muted-foreground"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
             ))}
           </div>
-        ))}
+          <PhotoCollage
+            images={about.collage}
+            flip
+            className="lg:sticky lg:top-24 lg:self-start"
+          />
+        </div>
       </Section>
 
       {/* How we came about — timeline */}
@@ -120,6 +131,9 @@ export default function AboutPage() {
           <PeopleGrid people={trustees} />
         </div>
       </Section>
+
+      {/* Closing beat */}
+      <CtaBlock variant="photo" />
     </>
   );
 }

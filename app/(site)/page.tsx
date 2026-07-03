@@ -23,22 +23,22 @@ export default function HomePage() {
       <Hero />
       {/* 1b · Values card overlapping the hero (old-site signature) */}
       <ValuesOverlapRow values={about.values} overlap />
-      {/* 2 · Mission — plain statement + four focus areas */}
+      {/* 2 · Who we are — mission + focus areas beside a real-photo collage */}
       <MissionBand />
-      {/* 3 · Key statistics */}
-      <StatBand />
-      {/* 4 · Featured initiatives — lead with the concrete work */}
+      {/* 3 · Featured initiatives — lead with the concrete work */}
       <FeaturedProjects />
-      {/* 5 · Impact — one real, result-led outcome */}
-      <ImpactHighlight />
-      {/* 6 · Volunteer — invite time, not money */}
+      {/* 4 · Impact — one real, result-led outcome (feature treatment) */}
+      <ImpactHighlight variant="feature" />
+      {/* 5 · Volunteer — invite time, not money (quiet white band) */}
       <CtaBlock variant="volunteer" />
-      {/* 7 · Donation CTA — the boldest action on the page */}
-      <CtaBlock variant="donate" />
-      {/* 8 · Partners — borrowed credibility */}
+      {/* 6 · What we have achieved — dark photo band + floating stat card */}
+      <StatBand variant="floating" />
+      {/* 7 · Partners — borrowed credibility (now with real logos) */}
       <PartnerCloud />
-      {/* 9 · Latest news — signs of life */}
+      {/* 8 · Latest news — signs of life */}
       <StoryGrid />
+      {/* 9 · The ONE dark closing beat — donate (old-site signature band) */}
+      <CtaBlock variant="photo" />
     </>
   );
 }

@@ -74,7 +74,7 @@ export default async function ProgramPage({ params }: ProgramPageProps) {
         )}
       </Section>
 
-      <CtaBlock variant="donate" />
+      <CtaBlock variant="photo" />
     </>
   );
 }

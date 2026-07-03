@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 import { Section } from "@/components/layout/section";
 import { ImpactHighlight } from "@/components/sections/impact-highlight";
+import { CtaBlock } from "@/components/sections/cta-block";
 import { PageHeader } from "@/components/sections/page-header";
 import { StatBand } from "@/components/sections/stat-band";
 import { createMetadata } from "@/lib/seo";
@@ -48,6 +49,9 @@ export default function ImpactPage() {
           </Link>
         </div>
       </Section>
+
+      {/* Closing beat */}
+      <CtaBlock variant="photo" />
     </>
   );
 }

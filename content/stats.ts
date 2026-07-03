@@ -21,3 +21,12 @@ export const stats: Stat[] = [
   { value: 28, prefix: "₦", suffix: "M+", label: "Funds raised" },
   { value: 9000, label: "People reached" },
 ];
+
+/** Copy + photo for the homepage's floating stat band (old-site treatment). */
+export const achievementsBand = {
+  eyebrow: "Thriving every day",
+  title: "What we have achieved",
+  body: "Through dedication and collective effort, we have touched lives, provided hope, and empowered communities.",
+  image: "/images/home/P1060291.jpg",
+  imageAlt: "A KHI outreach event in Abuja",
+} as const;

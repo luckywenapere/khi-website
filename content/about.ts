@@ -39,6 +39,33 @@ export const about = {
 
   focusAreas: ["Education", "Health", "Gender equality"],
 
+  /** Real photography beside "Our story" (v2). One meaningful alt, rest decorative. */
+  collage: [
+    {
+      src: "/images/about/sewing-training.jpg",
+      alt: "A young woman at a sewing machine during vocational training",
+    },
+    {
+      src: "/images/projects/pads-and-pals/school-outreach.jpg",
+      alt: "KHI volunteers at a school outreach session",
+    },
+    {
+      src: "/images/about/school-compound.jpg",
+      alt: "A school compound KHI works with",
+      decorative: true,
+    },
+    {
+      src: "/images/projects/khi-scholarship-cohort-1/ict-lab-group.jpg",
+      alt: "Scholarship award group photo",
+      decorative: true,
+    },
+    {
+      src: "/images/home/P1060450.jpg",
+      alt: "KHI community program photo",
+      decorative: true,
+    },
+  ],
+
   story: [
     {
       heading: "A soft spot for children",

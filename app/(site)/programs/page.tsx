@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 import { Section } from "@/components/layout/section";
+import { CtaBlock } from "@/components/sections/cta-block";
 import { PageHeader } from "@/components/sections/page-header";
 import { getProjectsByProgram, type Project } from "@/content/projects";
 import { programs } from "@/content/programs";
@@ -62,6 +63,9 @@ export default function ProgramsPage() {
           })}
         </ul>
       </Section>
+
+      {/* Closing beat */}
+      <CtaBlock variant="photo" />
     </>
   );
 }

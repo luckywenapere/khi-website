@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 import { Section } from "@/components/layout/section";
+import { PlaceholderImage } from "@/components/shared/placeholder-image";
 import { getPartner } from "@/content/partners";
 import { getProgram } from "@/content/programs";
 import type { Project } from "@/content/projects";
@@ -81,6 +82,18 @@ export function ProjectDetail({ project }: { project: Project }) {
           </div>
         ) : null}
       </dl>
+
+      {/* Photo-led opening (v2): the strongest gallery image leads the page. */}
+      {hasPhotos ? (
+        <PlaceholderImage
+          alt={project.gallery![0].alt}
+          src={project.gallery![0].src}
+          priority
+          showLabel={false}
+          className="mt-8 aspect-[16/9] w-full"
+          sizes="(max-width: 1200px) 100vw, 1200px"
+        />
+      ) : null}
 
       <div className="text-body-lg mt-8 max-w-prose space-y-4 text-muted-foreground">
         {project.body.map((paragraph, index) => (

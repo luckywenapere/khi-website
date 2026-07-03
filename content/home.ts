@@ -23,8 +23,36 @@ export const home = {
   },
 
   mission: {
+    eyebrow: "About us",
+    title: "Who we are",
     lead: "Kind Humanitarian Initiative brings practical, dignified help to people in and around Abuja.",
     body: "We concentrate on four areas where small, well-run efforts change lives: paying school fees, protecting health and dignity, feeding families through hard seasons, and building the next generation of leaders.",
+    /* Real photography (recovered/staged); one meaningful alt, rest decorative. */
+    collage: [
+      {
+        src: "/images/projects/pads-and-pals/one-act-of-kindness.jpg",
+        alt: 'Schoolgirls with a KHI "One Act of Kindness" sign at a school outreach',
+      },
+      {
+        src: "/images/home/P1060169.jpg",
+        alt: "KHI community program photo",
+        decorative: true,
+      },
+      {
+        src: "/images/about/sewing-training.jpg",
+        alt: "A young woman at a sewing machine during vocational training",
+      },
+      {
+        src: "/images/home/P1060236.jpg",
+        alt: "KHI community program photo",
+        decorative: true,
+      },
+      {
+        src: "/images/home/P1060266.jpg",
+        alt: "KHI community program photo",
+        decorative: true,
+      },
+    ],
   },
 
   impact: {
@@ -63,6 +91,17 @@ export const home = {
       body: "Organisations and businesses extend KHI's reach. Let's find what we can build together for communities in Abuja.",
       label: "Explore partnership",
       href: "/get-involved/partner",
+    },
+    /* Dark photo closing band — the old site's signature beat (one per page).
+       [KHI] Confirm the headline tone; image is the old band's own photo. */
+    photo: {
+      eyebrow: "Make a difference",
+      title: "They need your help.",
+      body: "Extend a hand. Your gift covers exam fees, hygiene kits, and food packs for families in and around Abuja.",
+      label: "Donate now",
+      href: "/donate",
+      image: "/images/home/they-need-your-help.jpg",
+      imageAlt: "Children at a KHI community program in Abuja",
     },
   },
 
