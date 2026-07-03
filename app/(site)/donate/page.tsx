@@ -38,7 +38,7 @@ export default function DonatePage() {
             </div>
           </div>
 
-          <aside className="rounded-xl border border-border bg-gray-50 p-6">
+          <aside className="rounded-xl border border-border bg-white p-6">
             <h2 className="text-2xl">Where your gift goes</h2>
             <ul className="mt-4 space-y-2">
               {whereItGoes.map((item) => (

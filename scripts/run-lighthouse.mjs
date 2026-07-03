@@ -56,7 +56,15 @@ for (const [name, path] of ROUTES) {
       TBT: r.audits["total-blocking-time"]?.displayValue ?? "",
     });
   } catch {
-    rows.push({ route: path, Perf: "ERR", A11y: "", BP: "", SEO: "", LCP: "", TBT: "" });
+    rows.push({
+      route: path,
+      Perf: "ERR",
+      A11y: "",
+      BP: "",
+      SEO: "",
+      LCP: "",
+      TBT: "",
+    });
   }
 }
 console.table(rows);

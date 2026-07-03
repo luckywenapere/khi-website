@@ -24,7 +24,7 @@ export function ImpactHighlight({
   const { impact } = home;
 
   return (
-    <Section className="border-y border-border bg-gray-50">
+    <Section className="border-y border-border bg-white">
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <Reveal>
           <p className="text-overline text-blue-700">{impact.eyebrow}</p>

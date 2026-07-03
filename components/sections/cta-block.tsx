@@ -18,11 +18,12 @@ export function CtaBlock({ variant }: { variant: CtaVariant }) {
   const isDonate = variant === "donate";
   const isPartner = variant === "partner";
 
+  // On the cream canvas, quiet bands are white (cream-on-cream would vanish).
   const bandClass = isDonate
     ? "bg-blue-600"
     : isPartner
-      ? "border-y border-border bg-background"
-      : "bg-cream";
+      ? "border-y border-border bg-white"
+      : "border-y border-border bg-white";
 
   return (
     <section className={bandClass}>

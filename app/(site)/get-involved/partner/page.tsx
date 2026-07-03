@@ -44,7 +44,7 @@ export default function PartnerPage() {
         </ul>
       </Section>
 
-      <Section spacing="compact" className="border-t border-border bg-gray-50">
+      <Section spacing="compact" className="border-t border-border bg-white">
         <div className="max-w-prose">
           <h2>Let&rsquo;s work together</h2>
           <p className="mt-4 text-muted-foreground">

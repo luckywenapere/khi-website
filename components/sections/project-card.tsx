@@ -31,6 +31,7 @@ export function ProjectCard({ project }: { project: Project }) {
     <article className="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-card transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-md">
       <PlaceholderImage
         alt={project.imageAlt}
+        src={project.cardImage ?? project.gallery?.[0]?.src}
         className="aspect-[16/10] w-full rounded-none"
         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
       />

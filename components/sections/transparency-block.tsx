@@ -97,7 +97,7 @@ export function TransparencyBlock() {
       {/* Reports */}
       <div>
         <h2 className="text-2xl sm:text-3xl">Reports & accounts</h2>
-        <div className="mt-4 flex items-start gap-3 rounded-lg border border-dashed border-border bg-gray-50 p-5">
+        <div className="mt-4 flex items-start gap-3 rounded-lg border border-dashed border-border bg-white p-5">
           <FileText
             className="mt-0.5 size-5 shrink-0 text-blue-700"
             aria-hidden="true"

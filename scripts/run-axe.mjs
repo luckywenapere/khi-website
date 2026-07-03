@@ -38,7 +38,9 @@ for (const [name, path] of ROUTES) {
   const r = await new AxeBuilder({ page }).withTags(TAGS).analyze();
   total += r.violations.length;
   for (const v of r.violations) {
-    console.log(`  [${name}] ${v.impact ?? "n/a"} — ${v.id}: ${v.help} (${v.nodes.length} node[s])`);
+    console.log(
+      `  [${name}] ${v.impact ?? "n/a"} — ${v.id}: ${v.help} (${v.nodes.length} node[s])`,
+    );
   }
   summary.push({
     route: path,
@@ -49,4 +51,8 @@ for (const [name, path] of ROUTES) {
 }
 await browser.close();
 console.table(summary);
-console.log(total === 0 ? "\n✅ axe: 0 violations across all routes" : `\n❌ axe: ${total} violation(s)`);
+console.log(
+  total === 0
+    ? "\n✅ axe: 0 violations across all routes"
+    : `\n❌ axe: ${total} violation(s)`,
+);

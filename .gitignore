@@ -45,3 +45,6 @@ next-env.d.ts
 
 # Raw WordPress media export — 192MB staging dump (not part of the app)
 /docs/wp-export/
+
+# Raw photo drop-zone (staging only; optimized outputs go in public/images/projects/)
+public/images/incoming/

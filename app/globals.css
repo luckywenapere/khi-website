@@ -46,7 +46,8 @@
   --cream: #f7f6ec; /* warm off-white from the logo badge; optional surface */
 
   /* ===== shadcn semantic tokens → mapped to brand (brief §2.2) ===== */
-  --background: var(--white);
+  /* v2: cream is the default page canvas (old-site warmth); cards stay white */
+  --background: var(--cream);
   --foreground: var(--charcoal);
   --card: var(--white);
   --card-foreground: var(--charcoal);
@@ -83,6 +84,17 @@
   --duration-base: 250ms;
   --duration-entrance: 400ms;
   --ease-entrance: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* v2 photo scrims — the only sanctioned path for white text over photos.
+     Guardrail: the layer behind any text must measure ≥ charcoal at 65%
+     opacity (worst-case white pixel composite keeps solid-white text ≥ AA). */
+  --scrim-hero: linear-gradient(
+    to top,
+    rgba(31, 35, 40, 0.82) 0%,
+    rgba(31, 35, 40, 0.68) 55%,
+    rgba(31, 35, 40, 0.55) 100%
+  );
+  --scrim-band: rgba(31, 35, 40, 0.72);
 }
 
 /* =====================================================================
@@ -214,6 +226,12 @@
     outline: 2px solid var(--ring);
     outline-offset: 2px;
   }
+
+  /* v2 guardrail: the blue ring is invisible on blue/dark/photo bands
+     (blue-500 vs blue-600 = 1.31:1). Bands opt in with .on-dark. */
+  .on-dark :focus-visible {
+    outline-color: var(--white);
+  }
 }
 
 /* =====================================================================
@@ -245,6 +263,25 @@
   .text-body-lg {
     font-size: 1.125rem;
     line-height: 1.6;
+  }
+
+  /* Largest editorial display — page titles + the full-bleed hero (v2). */
+  .text-display-xl {
+    font-family: var(--font-fraunces), ui-serif, Georgia, serif;
+    font-optical-sizing: auto;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    font-weight: 500;
+    text-wrap: balance;
+  }
+
+  /* Photo-scrim overlays (v2) — pair ONLY with solid-white text. */
+  .scrim-hero {
+    background-image: var(--scrim-hero);
+  }
+  .scrim-band {
+    background-color: var(--scrim-band);
   }
 
   /* The signature blue→cyan throughline — use sparingly as an accent line. */

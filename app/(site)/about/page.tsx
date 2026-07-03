@@ -65,7 +65,7 @@ export default function AboutPage() {
       </Section>
 
       {/* How we came about — timeline */}
-      <Section spacing="compact" className="border-y border-border bg-gray-50">
+      <Section spacing="compact" className="border-y border-border bg-white">
         <div className="mx-auto max-w-prose">
           <h2>How we came about</h2>
           <p className="mt-3 text-muted-foreground">
@@ -105,7 +105,7 @@ export default function AboutPage() {
       </Section>
 
       {/* People & governance */}
-      <Section className="border-t border-border bg-gray-50">
+      <Section className="border-t border-border bg-white">
         <h2>People &amp; governance</h2>
         <p className="mt-3 max-w-prose text-muted-foreground">
           Our team and Board of Trustees bring expertise across engineering,
