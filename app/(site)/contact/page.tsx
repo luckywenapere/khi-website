@@ -31,7 +31,8 @@ export default function ContactPage() {
 
       <Section>
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
-          <div>
+          {/* White form card on the cream canvas (old-site treatment). */}
+          <div className="rounded-xl border border-border bg-card p-6 shadow-sm sm:p-8">
             <h2 className="text-2xl">Send a message</h2>
             <div className="mt-6">
               <ContactForm />

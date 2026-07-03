@@ -3,7 +3,7 @@ import { ArrowRight, ShieldCheck } from "lucide-react";
 
 import { Section } from "@/components/layout/section";
 import { DonateGrid } from "@/components/sections/donate-grid";
-import { PageHeader } from "@/components/sections/page-header";
+import { DonateHero } from "@/components/sections/donate-hero";
 import { whereItGoes } from "@/content/donate";
 import { createMetadata } from "@/lib/seo";
 
@@ -17,16 +17,9 @@ export const metadata = createMetadata({
 export default function DonatePage() {
   return (
     <>
-      <PageHeader
-        eyebrow="Donate"
-        title="Support our work"
-        intro="Your gift funds practical help (exam fees, hygiene kits, food packs, and youth leadership) for communities in and around Abuja."
-        src="/images/donate/girl-water.jpg"
-        imageAlt="A child carrying water in a Nigerian community"
-        priority
-      />
+      <DonateHero />
 
-      <Section>
+      <Section className="pt-32 md:pt-44">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
           <div>
             <h2>Choose an amount</h2>

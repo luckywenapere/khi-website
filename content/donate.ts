@@ -28,6 +28,18 @@ export function formatNaira(amount: number): string {
 }
 
 /**
+ * Donate page hero (v2) — the old site's blue band + overlapping photo.
+ * [KHI] Headline is the old site's own line; confirm tone.
+ */
+export const donateHero = {
+  headline: "The goal is to give it away happily.",
+  subhead:
+    "Extend a hand. Your gift funds practical help (exam fees, hygiene kits, food packs, and youth leadership) for communities in and around Abuja.",
+  image: "/images/donate/girl-water.jpg",
+  imageAlt: "A child carrying water in a Nigerian community",
+} as const;
+
+/**
  * "Where your gift goes" — templated categories. Specific per-amount figures
  * (e.g. "₦10,000 = a term of exam fees") are intentionally omitted until KHI
  * supplies real numbers ([KHI]).

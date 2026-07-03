@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 import { Section } from "@/components/layout/section";
 import { PageHeader } from "@/components/sections/page-header";
+import { PartnerRows } from "@/components/sections/partner-rows";
 import { buttonVariants } from "@/components/ui/button";
 import { partners } from "@/content/partners";
 import { cn } from "@/lib/utils";
@@ -26,23 +27,9 @@ export default function PartnerPage() {
       />
 
       <Section>
-        <h2>Our partners</h2>
-        {/* [KHI] Partner logos to come — bordered name cards until then. */}
-        <ul className="mt-6 grid gap-4 sm:grid-cols-2">
-          {partners.map((partner) => (
-            <li
-              key={partner.slug}
-              className="rounded-xl border border-border bg-card p-6"
-            >
-              <h3 className="font-sans text-lg font-semibold text-charcoal">
-                {partner.name}
-              </h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                {partner.description}
-              </p>
-            </li>
-          ))}
-        </ul>
+        <h2 className="sr-only">Our partners</h2>
+        {/* Editorial rows with recovered logos (old-site Partnerships layout). */}
+        <PartnerRows partners={partners} />
       </Section>
 
       <Section spacing="compact" className="border-t border-border bg-white">
