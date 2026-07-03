@@ -22,6 +22,7 @@ export default function ProgramsPage() {
   return (
     <>
       <PageHeader
+        variant="editorial"
         eyebrow="What We Do"
         title="Our programs"
         intro="KHI works across four ongoing areas. Each program holds specific, time-bound projects, the concrete work that delivers it."

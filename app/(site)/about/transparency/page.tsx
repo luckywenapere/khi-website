@@ -15,6 +15,7 @@ export default function TransparencyPage() {
   return (
     <>
       <PageHeader
+        variant="editorial"
         eyebrow="About"
         title="Transparency & financials"
         intro="Donors and partners deserve to know how KHI is registered and where their support goes. Here is what we can share, with anything not yet confirmed clearly marked."

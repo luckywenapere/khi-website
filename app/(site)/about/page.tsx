@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Users } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 import { Section } from "@/components/layout/section";
 import { PageHeader } from "@/components/sections/page-header";
@@ -21,12 +21,10 @@ export default function AboutPage() {
   return (
     <>
       <PageHeader
+        variant="editorial"
         eyebrow="About"
         title="About KHI"
         intro={about.intro}
-        imageAlt="KHI team and community members in Abuja"
-        icon={Users}
-        priority
       />
 
       {/* Vision & mission */}

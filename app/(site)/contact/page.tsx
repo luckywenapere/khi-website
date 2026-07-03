@@ -23,6 +23,7 @@ export default function ContactPage() {
   return (
     <>
       <PageHeader
+        variant="editorial"
         eyebrow="Contact"
         title="Contact KHI"
         intro="Have a question, an idea, or want to work together? Send us a message and we will get back to you."

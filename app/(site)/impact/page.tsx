@@ -18,6 +18,7 @@ export default function ImpactPage() {
   return (
     <>
       <PageHeader
+        variant="editorial"
         eyebrow="Impact"
         title="Our impact"
         intro="We measure our work by what changes for the people we serve. Here is what we can show so far, with figures we are still dating and sourcing for full credibility."

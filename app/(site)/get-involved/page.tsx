@@ -13,6 +13,7 @@ export default function GetInvolvedPage() {
   return (
     <>
       <PageHeader
+        variant="editorial"
         eyebrow="Get Involved"
         title="Get involved"
         intro="There are three ways to help KHI bring practical support to communities in and around Abuja: give your time, partner your organisation, or make a gift. Choose what fits you."

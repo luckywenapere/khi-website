@@ -15,12 +15,10 @@ export default function VolunteerPage() {
   return (
     <>
       <PageHeader
+        variant="editorial"
         eyebrow="Get Involved"
         title="Volunteer with KHI"
         intro="From tutoring and mentoring to distribution days, volunteers make our programs possible. Tell us a little about yourself and the areas you care about."
-        src="/images/volunteer/volunteer-team.jpg"
-        imageAlt="KHI volunteers together at a community program"
-        priority
       />
 
       <Section>
@@ -33,8 +31,8 @@ export default function VolunteerPage() {
               health and hygiene, food relief, and youth leadership.
             </p>
             <PlaceholderImage
-              alt="KHI volunteers distributing support in the community"
-              src="/images/volunteer/volunteers.jpg"
+              alt="KHI volunteers together at a community program"
+              src="/images/volunteer/volunteer-team.jpg"
               className="mt-6 aspect-[4/3] w-full"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />

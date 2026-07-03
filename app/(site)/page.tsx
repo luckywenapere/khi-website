@@ -6,6 +6,8 @@ import { MissionBand } from "@/components/sections/mission-band";
 import { PartnerCloud } from "@/components/sections/partner-cloud";
 import { StatBand } from "@/components/sections/stat-band";
 import { StoryGrid } from "@/components/sections/story-grid";
+import { ValuesOverlapRow } from "@/components/sections/values-overlap-row";
+import { about } from "@/content/about";
 import { site } from "@/content/site";
 import { createMetadata } from "@/lib/seo";
 
@@ -19,6 +21,8 @@ export default function HomePage() {
     <>
       {/* 1 · Hero — who KHI is + what they do + act (holds the single h1) */}
       <Hero />
+      {/* 1b · Values card overlapping the hero (old-site signature) */}
+      <ValuesOverlapRow values={about.values} overlap />
       {/* 2 · Mission — plain statement + four focus areas */}
       <MissionBand />
       {/* 3 · Key statistics */}

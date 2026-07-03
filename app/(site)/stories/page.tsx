@@ -13,6 +13,7 @@ export default function StoriesPage() {
   return (
     <>
       <PageHeader
+        variant="editorial"
         eyebrow="Stories"
         title="Stories"
         intro="Articles and updates from our work on education, girls, and the communities we serve."

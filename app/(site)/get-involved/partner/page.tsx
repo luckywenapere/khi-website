@@ -19,6 +19,7 @@ export default function PartnerPage() {
   return (
     <>
       <PageHeader
+        variant="editorial"
         eyebrow="Get Involved"
         title="Partner with us"
         intro="Kind Humanitarian Initiative prioritizes strategic partnerships to broaden its impact and address diverse community needs. These collaborations are built on shared values and a commitment to sustainable, positive change."

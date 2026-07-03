@@ -43,6 +43,7 @@ export default async function ProgramPage({ params }: ProgramPageProps) {
   return (
     <>
       <PageHeader
+        variant="editorial"
         eyebrow="What We Do"
         title={program.title}
         intro={program.description}
