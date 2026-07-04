@@ -74,7 +74,8 @@ export const team: readonly Person[] = [
   {
     name: "Honour Odozie",
     role: "Partnership / Volunteer Manager",
-    // [KHI] Bio and headshot to be supplied; placeholder portrait until then.
+    photo: "/images/people/honour-odozie.jpg",
+    // [KHI] Bio to be supplied.
     bio: [],
   },
   {
