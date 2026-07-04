@@ -78,7 +78,6 @@ export const footerNav: FooterGroup[] = [
   {
     title: "Trust & legal",
     links: [
-      { label: "Transparency", href: "/about/transparency" },
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms & Conditions", href: "/terms" },
       { label: "Cookie Policy", href: "/cookies" },

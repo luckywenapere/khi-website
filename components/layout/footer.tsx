@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { NewsletterForm } from "@/components/forms/newsletter-form";
+import { CurrentYear } from "@/components/shared/current-year";
 import { Logo } from "@/components/shared/logo";
 import { SocialLinks } from "@/components/shared/social-links";
 import { Separator } from "@/components/ui/separator";
@@ -15,8 +16,6 @@ function telHref(phone: string): string {
 
 /** Site footer: brand, link groups, contact, newsletter stub, legal line (§4.2). */
 export function Footer() {
-  const year = new Date().getFullYear();
-
   return (
     <footer className="border-t border-border bg-white">
       <Container>
@@ -87,7 +86,7 @@ export function Footer() {
 
         <div className="py-6 text-xs text-muted-foreground">
           <p>
-            © {year} {site.name}.
+            © <CurrentYear /> {site.name}.
           </p>
         </div>
       </Container>

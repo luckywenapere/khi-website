@@ -109,9 +109,7 @@ export function ProjectDetail({ project }: { project: Project }) {
           ) : (
             <>
               Photos from this project.{" "}
-              <span className="text-charcoal">
-                [KHI: real images to be confirmed.]
-              </span>
+              <span className="text-charcoal">Photos coming soon.</span>
             </>
           )}
         </p>

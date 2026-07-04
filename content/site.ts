@@ -40,8 +40,16 @@ export const site = {
     phones: ["+234 708 222 7153", "+234 908 892 8236"],
   },
   socials: [
-    { platform: "instagram", label: "Instagram", href: "#" },
-    { platform: "facebook", label: "Facebook", href: "#" },
+    {
+      platform: "instagram",
+      label: "Instagram",
+      href: "https://www.instagram.com/kind.humanitarian.initiative",
+    },
+    {
+      platform: "facebook",
+      label: "Facebook",
+      href: "https://www.facebook.com/share/1959CvXRq1/",
+    },
   ] satisfies SocialLink[],
 } as const;
 

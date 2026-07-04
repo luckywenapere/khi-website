@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 
 import { Section } from "@/components/layout/section";
 import { DonateGrid } from "@/components/sections/donate-grid";
@@ -47,25 +46,13 @@ export default function DonatePage() {
                 </li>
               ))}
             </ul>
-            <p className="mt-4 text-xs text-muted-foreground">
-              [KHI] Specific per-amount impact figures (e.g. &ldquo;₦10,000
-              covers a term of exam fees&rdquo;) will be added once confirmed.
-            </p>
-
             <p className="mt-6 flex items-start gap-2 border-t border-border pt-4 text-sm text-muted-foreground">
               <ShieldCheck
                 className="mt-0.5 size-4 shrink-0 text-blue-700"
                 aria-hidden="true"
               />
               <span>
-                KHI is a registered Nigerian non-profit.{" "}
-                <Link
-                  href="/about/transparency"
-                  className="inline-flex items-center gap-1 font-medium text-blue-700 hover:underline"
-                >
-                  See where your money goes
-                  <ArrowRight className="size-3.5" aria-hidden="true" />
-                </Link>
+                KHI is a registered Nigerian non-profit (CAC, 3 January 2025).
               </span>
             </p>
           </aside>

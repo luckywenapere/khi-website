@@ -1,6 +1,3 @@
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-
 import { Section } from "@/components/layout/section";
 import { CtaBlock } from "@/components/sections/cta-block";
 import { PageHeader } from "@/components/sections/page-header";
@@ -83,13 +80,6 @@ export default function AboutPage() {
           <div className="mt-8">
             <Timeline items={about.timeline} />
           </div>
-          <Link
-            href="/about/transparency"
-            className="mt-8 inline-flex items-center gap-1 text-sm font-medium text-blue-700 hover:underline"
-          >
-            See our transparency &amp; registration details
-            <ArrowRight className="size-4" aria-hidden="true" />
-          </Link>
         </div>
       </Section>
 

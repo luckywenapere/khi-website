@@ -106,7 +106,7 @@ export const about = {
     },
   ] satisfies Milestone[],
 
-  /** Registration facts reused by the Transparency page. */
+  /** Verified registration facts (CAC, TIN, SCUML). */
   founding: {
     foundedBy:
       "Ten graduates of the African Centre for Leadership, Strategy, and Development.",

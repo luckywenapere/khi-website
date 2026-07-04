@@ -3,8 +3,8 @@
  * Preset pages follow the pattern /pay/donate-n{amount}; "any amount" is a
  * dedicated page. All URLs are https.
  *
- * [KHI] Only `donate-n500` and `any-amount` were verified to exist on Paystack;
- * the other five presets are inferred from the naming pattern — confirm them.
+ * Paystack preset pages confirmed working by KHI (Jul 2026).
+
  */
 export const donate = {
   baseUrl: "https://paystack.shop/pay",

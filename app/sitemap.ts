@@ -9,7 +9,6 @@ import { siteUrl } from "@/lib/seo";
 const staticPaths = [
   "/",
   "/about",
-  "/about/transparency",
   "/programs",
   "/impact",
   "/get-involved",
