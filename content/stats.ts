@@ -8,12 +8,7 @@ export type Stat = {
   label: string;
 };
 
-/**
- * Headline impact figures (provided by KHI).
- * [KHI] Each figure still needs an "as of <date>" + source to be fully
- * credible; rendered without one for now rather than inventing a date.
- * [KHI] Confirm the 26 "Locations" are genuine communities/areas served.
- */
+/** Headline impact figures, provided by KHI (July 2026). */
 export const stats: Stat[] = [
   { value: 18, label: "Projects" },
   { value: 11, label: "Partners" },
@@ -21,6 +16,9 @@ export const stats: Stat[] = [
   { value: 28, prefix: "₦", suffix: "M+", label: "Funds raised" },
   { value: 9000, label: "People reached" },
 ];
+
+/** Shown beside the figures so the numbers carry their date. */
+export const statsAsOf = "As of July 2026";
 
 /** Copy + photo for the homepage's floating stat band (old-site treatment). */
 export const achievementsBand = {

@@ -1,16 +1,19 @@
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { PlaceholderImage } from "@/components/shared/placeholder-image";
-import { achievementsBand, stats } from "@/content/stats";
+import { achievementsBand, stats, statsAsOf } from "@/content/stats";
 
 import { StatCard } from "./stat-card";
 
 function StatGrid() {
   return (
-    <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5">
-      {stats.map((stat) => (
-        <StatCard key={stat.label} stat={stat} />
-      ))}
+    <div>
+      <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5">
+        {stats.map((stat) => (
+          <StatCard key={stat.label} stat={stat} />
+        ))}
+      </div>
+      <p className="mt-6 text-xs text-muted-foreground">{statsAsOf}</p>
     </div>
   );
 }
