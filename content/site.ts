@@ -43,8 +43,6 @@ export const site = {
     { platform: "instagram", label: "Instagram", href: "#" },
     { platform: "facebook", label: "Facebook", href: "#" },
   ] satisfies SocialLink[],
-  /** Charity/registration number TBD — placeholder until KHI confirms */
-  registrationNumber: null as string | null,
 } as const;
 
 export type Site = typeof site;

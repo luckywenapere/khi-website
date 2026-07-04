@@ -85,13 +85,9 @@ export function Footer() {
 
         <Separator />
 
-        <div className="flex flex-col items-start justify-between gap-2 py-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
+        <div className="py-6 text-xs text-muted-foreground">
           <p>
             © {year} {site.name}.
-          </p>
-          {/* TODO: replace with KHI's registration number once confirmed. */}
-          <p>
-            Registration number: <span className="text-charcoal">TBD</span>
           </p>
         </div>
       </Container>

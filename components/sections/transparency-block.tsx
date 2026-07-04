@@ -44,15 +44,6 @@ export function TransparencyBlock() {
               {founding.cacRegistered}
             </dd>
           </div>
-          <div className="rounded-lg border border-border bg-card p-5">
-            <dt className="text-overline text-blue-700">RC number</dt>
-            <dd className="mt-1 font-sans text-lg font-semibold text-charcoal">
-              TBD{" "}
-              <span className="text-sm font-normal text-muted-foreground">
-                [KHI: to confirm]
-              </span>
-            </dd>
-          </div>
         </dl>
         <ul className="mt-4 flex flex-wrap gap-2">
           {founding.certificates.map((certificate) => (
