@@ -75,8 +75,10 @@ export const team: readonly Person[] = [
     name: "Honour Odozie",
     role: "Partnership / Volunteer Manager",
     photo: "/images/people/honour-odozie.jpg",
-    // [KHI] Bio to be supplied.
-    bio: [],
+    bio: [
+      "Honour Odozie is an administrative and operations professional with expertise in supply chain management, project coordination, and human resource management.",
+      "She serves as the Volunteer and Partnership Manager at KHI, where she supports strategic partnerships and volunteer engagement to drive community impact. Honour is passionate about leadership, service, and empowering people through sustainable development initiatives.",
+    ],
   },
   {
     name: "Ezinne Janefrances Nwonu",
