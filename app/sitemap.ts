@@ -2,8 +2,11 @@ import type { MetadataRoute } from "next";
 
 import { programs } from "@/content/programs";
 import { projects } from "@/content/projects";
-import { stories } from "@/content/stories";
 import { siteUrl } from "@/lib/seo";
+import { getStories } from "@/lib/stories";
+
+/** Re-generated hourly so portal posts are listed without a redeploy. */
+export const revalidate = 3600;
 
 /** Routable static pages (dynamic [slug] routes are added from content). */
 const staticPaths = [
@@ -23,7 +26,8 @@ const staticPaths = [
   "/disclaimer",
 ];
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const stories = await getStories();
   const lastModified = new Date();
 
   const staticEntries = staticPaths.map((path) => ({
@@ -49,7 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const storyEntries = stories.map((story) => ({
     url: new URL(`/stories/${story.slug}`, siteUrl).toString(),
-    lastModified,
+    lastModified: new Date(`${story.date}T00:00:00Z`),
     changeFrequency: "monthly" as const,
     priority: 0.5,
   }));

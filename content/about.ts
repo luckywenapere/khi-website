@@ -50,8 +50,8 @@ export const about = {
       alt: "KHI volunteers at a school outreach session",
     },
     {
-      src: "/images/about/school-compound.jpg",
-      alt: "A school compound KHI works with",
+      src: "/images/projects/seeds-of-resilience/women-farmers-seated.jpg",
+      alt: "Women farmers at a Seeds of Resilience session",
       decorative: true,
     },
     {

@@ -3,6 +3,7 @@ import { ArrowLeft } from "lucide-react";
 
 import { Section } from "@/components/layout/section";
 import { PlaceholderImage } from "@/components/shared/placeholder-image";
+import { buttonVariants } from "@/components/ui/button";
 import { getPartner } from "@/content/partners";
 import { getProgram } from "@/content/programs";
 import type { Project } from "@/content/projects";
@@ -35,15 +36,12 @@ export function ProjectDetail({ project }: { project: Project }) {
     ? getPartner(project.partnerSlug)
     : undefined;
 
-  // Confirmed photos (Phase 3b §6) where present; otherwise placeholder tiles.
+  // Confirmed photos (Phase 3b §6) where present; projects without photos
+  // skip the gallery section entirely.
   const hasPhotos = Boolean(project.gallery?.length);
   const galleryImages: GalleryImage[] = hasPhotos
     ? project.gallery!.map((image) => ({ src: image.src, alt: image.alt }))
-    : [
-        { alt: project.imageAlt },
-        { alt: `${project.title} additional photo` },
-        { alt: `${project.title} additional photo` },
-      ];
+    : [];
 
   return (
     <Section>
@@ -99,24 +97,51 @@ export function ProjectDetail({ project }: { project: Project }) {
         {project.body.map((paragraph, index) => (
           <p key={index}>{paragraph}</p>
         ))}
+        {project.highlights?.length ? (
+          <ul className="list-disc space-y-1 pl-6 font-medium text-foreground">
+            {project.highlights.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        ) : null}
+        {project.closing?.map((paragraph, index) => (
+          <p key={`closing-${index}`}>{paragraph}</p>
+        ))}
       </div>
 
-      <div className="mt-12">
-        <h2 className="text-2xl">Gallery</h2>
-        <p className="mt-1 text-sm text-muted-foreground">
-          {hasPhotos ? (
-            "Photos from this project."
-          ) : (
-            <>
-              Photos from this project.{" "}
-              <span className="text-charcoal">Photos coming soon.</span>
-            </>
-          )}
-        </p>
-        <div className="mt-5">
-          <Gallery images={galleryImages} label={`${project.title} gallery`} />
+      {project.cta?.length ? (
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          {project.cta.map((action, index) => (
+            <Link
+              key={action.href}
+              href={action.href}
+              className={cn(
+                buttonVariants({
+                  variant: index === 0 ? "default" : "outline",
+                }),
+                "h-11 rounded-md px-6 text-base",
+              )}
+            >
+              {action.label}
+            </Link>
+          ))}
         </div>
-      </div>
+      ) : null}
+
+      {hasPhotos ? (
+        <div className="mt-12">
+          <h2 className="text-2xl">Gallery</h2>
+          <p className="mt-1 text-sm text-muted-foreground">
+            Photos from this project.
+          </p>
+          <div className="mt-5">
+            <Gallery
+              images={galleryImages}
+              label={`${project.title} gallery`}
+            />
+          </div>
+        </div>
+      ) : null}
 
       <div className="mt-12">
         <Link

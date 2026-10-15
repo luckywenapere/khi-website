@@ -22,7 +22,7 @@ export function StoryCard({
         src={story.image}
         icon={Newspaper}
         className="aspect-[16/9] w-full rounded-none"
-        sizes="(max-width: 768px) 100vw, 50vw"
+        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
       />
       <div className="flex flex-1 flex-col p-5">
         {story.date ? (

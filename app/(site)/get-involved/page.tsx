@@ -20,8 +20,9 @@ const pathways = [
     body: "Give your time and skills: tutoring, mentoring, and distribution days across our four programs.",
     href: "/get-involved/volunteer",
     label: "Become a volunteer",
-    image: "/images/volunteer/volunteer-team.jpg",
-    imageAlt: "KHI volunteers together at a community program",
+    image: "/images/volunteer/khi-volunteer-team.jpg",
+    imageAlt:
+      "KHI volunteers in branded vests and T-shirts at a school outreach",
   },
   {
     title: "Partner with us",

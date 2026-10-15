@@ -11,6 +11,10 @@ type CreateMetadataInput = {
   description?: string;
   /** Route path beginning with "/", used for canonical + OG url. */
   path?: string;
+  /** Share image (absolute URL or site path); defaults to the route's OG image. */
+  image?: string;
+  /** Keep the page out of search engines (e.g. the private portal). */
+  noIndex?: boolean;
 };
 
 /**
@@ -22,6 +26,8 @@ export function createMetadata({
   title,
   description,
   path = "/",
+  image,
+  noIndex = false,
 }: CreateMetadataInput = {}): Metadata {
   const url = new URL(path, siteUrl).toString();
   const resolvedDescription = description ?? site.description;
@@ -48,6 +54,13 @@ export function createMetadata({
   // Only set `title` when provided — an explicit `undefined` would suppress the
   // root layout's title.default (which is what the homepage relies on).
   if (title) metadata.title = title;
+
+  if (image) {
+    metadata.openGraph = { ...metadata.openGraph, images: [{ url: image }] };
+    metadata.twitter = { ...metadata.twitter, images: [image] };
+  }
+
+  if (noIndex) metadata.robots = { index: false, follow: false };
 
   return metadata;
 }

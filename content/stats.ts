@@ -25,6 +25,8 @@ export const achievementsBand = {
   eyebrow: "Thriving every day",
   title: "What we have achieved",
   body: "Through dedication and collective effort, we have touched lives, provided hope, and empowered communities.",
-  image: "/images/home/P1060291.jpg",
-  imageAlt: "A KHI outreach event in Abuja",
+  // Oct 2026 refresh: EduKit distribution (2026).
+  image: "/images/projects/edukit/students-with-backpacks.jpg",
+  imageAlt:
+    "Pupils holding up their new EduKit backpacks with KHI volunteers outside their school",
 } as const;

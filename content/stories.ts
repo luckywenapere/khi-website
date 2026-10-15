@@ -1,50 +1,145 @@
+/**
+ * Story types + the repo half of the stories content layer.
+ *
+ * Stories come from two places, merged in `lib/stories.ts`:
+ * 1. Markdown files in `content/posts/*.md` (read here, at build/ISR time).
+ * 2. Posts published from the /portal, stored in Vercel Blob.
+ */
+import { readdirSync, readFileSync } from "node:fs";
+import { join } from "node:path";
+
+export type StoryImage = { src: string; alt: string };
+
 export type Story = {
   slug: string;
   title: string;
   excerpt: string;
-  /** ISO date (verified: both posts are 2025-09-10). */
+  /** ISO date, YYYY-MM-DD. */
   date: string;
   author: string;
-  /** Markdown body file under content/posts (read at build). */
-  bodyFile: string;
-  /** Story image (Phase 4). Absent → PlaceholderImage. */
+  /** Markdown body. */
+  body: string;
+  /** Cover image (absent → PlaceholderImage). */
   image?: string;
   imageAlt: string;
+  /** Extra photos rendered below the body. */
+  gallery: StoryImage[];
+  /** Where the post lives: a repo markdown file or a portal (Blob) post. */
+  source: "repo" | "portal";
 };
 
+export const DEFAULT_AUTHOR = "Kind Humanitarian Initiative";
+
+const POSTS_DIR = join(process.cwd(), "content", "posts");
+
+function unquote(value: string): string {
+  const trimmed = value.trim();
+  if (
+    trimmed.length >= 2 &&
+    ((trimmed.startsWith('"') && trimmed.endsWith('"')) ||
+      (trimmed.startsWith("'") && trimmed.endsWith("'")))
+  ) {
+    return trimmed.slice(1, -1).replace(/\\"/g, '"');
+  }
+  return trimmed;
+}
+
 /**
- * The two real articles from the WordPress export (verified). Bodies live as
- * verbatim markdown in content/posts and are read at build. Newest first.
+ * Minimal YAML-ish frontmatter parser: `key: value` lines plus one level of
+ * `- item` lists (used for `gallery`). Enough for hand-written posts.
  */
-export const stories: readonly Story[] = [
-  {
-    slug: "the-power-of-the-girl-child",
-    title: "The Power of the Girl Child: A Path to a Brighter Future",
-    excerpt:
-      "The world is full of untapped potential, and a significant portion of it lies in the hearts and minds of girls around the globe.",
-    date: "2025-09-10",
-    author: "Kind Humanitarian Initiative",
-    bodyFile: "the-power-of-the-girl-child.md",
-    // [KHI] Topical image from the export — confirm in the final eyes-on check.
-    image: "/images/stories/girl-child.jpeg",
-    imageAlt: "A girl studying in a classroom in Abuja",
-  },
-  {
-    slug: "back-2-school",
-    title: "Back 2 School",
-    excerpt:
-      "The summer holidays are coming to an end, and it's time to gear up for a new academic year.",
-    date: "2025-09-10",
-    author: "Blessing",
-    bodyFile: "back-2-school.md",
-    image: "/images/stories/torbee2.jpg",
-    imageAlt: "Students heading back to school with their supplies",
-  },
-] as const;
+export function parseFrontmatter(raw: string): {
+  data: Record<string, string | string[]>;
+  body: string;
+} {
+  const text = raw.replace(/^\uFEFF/, "").replace(/\r\n/g, "\n");
+  if (!text.startsWith("---")) return { data: {}, body: text };
+  const end = text.indexOf("\n---", 3);
+  if (end === -1) return { data: {}, body: text };
+  const block = text.slice(3, end);
+  const afterEnd = text.indexOf("\n", end + 1);
+  const body = afterEnd === -1 ? "" : text.slice(afterEnd + 1).trimStart();
 
-/** Latest stories for the homepage news grid (already newest-first). */
-export const latestStories = stories;
+  const data: Record<string, string | string[]> = {};
+  let listKey: string | null = null;
+  for (const line of block.split("\n")) {
+    if (!line.trim() || line.trim().startsWith("#")) continue;
+    const item = line.match(/^\s*-\s+(.*)$/);
+    if (item && listKey) {
+      const list = data[listKey];
+      if (Array.isArray(list)) list.push(unquote(item[1]));
+      continue;
+    }
+    const pair = line.match(/^([A-Za-z][\w-]*)\s*:\s*(.*)$/);
+    if (!pair) continue;
+    const [, key, value] = pair;
+    if (value.trim() === "") {
+      data[key] = [];
+      listKey = key;
+    } else {
+      data[key] = unquote(value);
+      listKey = null;
+    }
+  }
+  return { data, body };
+}
 
-export function getStory(slug: string): Story | undefined {
-  return stories.find((story) => story.slug === slug);
+function str(value: string | string[] | undefined): string {
+  return typeof value === "string" ? value : "";
+}
+
+/** First paragraph of the body, trimmed to ~200 chars, as a fallback excerpt. */
+export function excerptFrom(body: string): string {
+  const first =
+    body
+      .split(/\n\s*\n/)
+      .map((p) => p.replace(/[#*_>`]/g, "").trim())
+      .find(Boolean) ?? "";
+  return first.length > 200 ? `${first.slice(0, 197).trimEnd()}…` : first;
+}
+
+/** Every `content/posts/*.md` story (unsorted). Missing folder → []. */
+export function readRepoStories(): Story[] {
+  let files: string[];
+  try {
+    files = readdirSync(POSTS_DIR).filter(
+      (file) => file.endsWith(".md") && file.toLowerCase() !== "readme.md",
+    );
+  } catch {
+    return [];
+  }
+
+  return files.flatMap((file): Story[] => {
+    const { data, body } = parseFrontmatter(
+      readFileSync(join(POSTS_DIR, file), "utf8"),
+    );
+    const title = str(data.title);
+    const date = str(data.date);
+    if (!title || !/^\d{4}-\d{2}-\d{2}$/.test(date)) return [];
+    const gallery = Array.isArray(data.gallery) ? data.gallery : [];
+    return [
+      {
+        slug: file.replace(/\.md$/, ""),
+        title,
+        date,
+        author: str(data.author) || DEFAULT_AUTHOR,
+        excerpt: str(data.excerpt) || excerptFrom(body),
+        body,
+        image: str(data.image) || undefined,
+        imageAlt: str(data.imageAlt) || title,
+        gallery: gallery.map((src, index) => ({
+          src,
+          alt: `${title}: photo ${index + 2}`,
+        })),
+        source: "repo",
+      },
+    ];
+  });
+}
+
+/** Newest first; ties broken by title for a stable order. */
+export function sortStories(list: Story[]): Story[] {
+  return [...list].sort(
+    (a, b) => b.date.localeCompare(a.date) || a.title.localeCompare(b.title),
+  );
 }

@@ -31,8 +31,8 @@ export default function VolunteerPage() {
               health and hygiene, food relief, and youth leadership.
             </p>
             <PlaceholderImage
-              alt="KHI volunteers together at a community program"
-              src="/images/volunteer/volunteer-team.jpg"
+              alt="KHI volunteers in branded vests and T-shirts at a school outreach"
+              src="/images/volunteer/khi-volunteer-team.jpg"
               className="mt-6 aspect-[4/3] w-full"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />

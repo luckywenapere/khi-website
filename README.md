@@ -36,6 +36,8 @@ Create `.env.local` (and set the same in your host). Nothing is required to run 
 |---|---|---|
 | `RESEND_API_KEY` | For form delivery | Sends Contact / Volunteer / newsletter submissions via [Resend](https://resend.com) to `info@khinitiative.org`. **Until set, forms validate and show a friendly error — never a fake success.** |
 | `EMAIL_FROM` | With Resend | Verified sender, e.g. `KHI <noreply@khinitiative.org>`. The sending domain must be verified in Resend. |
+| `PORTAL_PASSWORD` | For the stories portal | Password for `/portal`, where KHI staff publish stories from a phone. Also signs the 30-day session cookie, so changing it signs everyone out. |
+| `BLOB_READ_WRITE_TOKEN` | For the stories portal | Set automatically when a Vercel Blob store is connected to the project. Portal posts are saved as `posts/<slug>.json` with photos under `posts/<slug>/`. Without it the site builds normally and `/portal` shows "Portal not configured". |
 
 Email delivery is provider-agnostic — swap [`lib/email.ts`](lib/email.ts) for Formspree or another provider in one place. Donations use **Paystack redirect** links configured in [`content/donate.ts`](content/donate.ts) (no key needed).
 

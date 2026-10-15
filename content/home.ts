@@ -16,10 +16,10 @@ export const home = {
     subhead: site.mission,
     primaryCta: { label: "Donate", href: "/donate" },
     secondaryCta: { label: "See our work", href: "/programs" },
-    // Phase 3b §6: genuine event photo (confirm strongest in visual review).
-    image: "/images/home/P1060250.jpg",
+    // Oct 2026 refresh: Seeds of Resilience group photo (Keti Community, April 2026).
+    image: "/images/projects/seeds-of-resilience/group-photo.jpg",
     imageAlt:
-      "KHI volunteers and community members during a program in Abuja, Nigeria",
+      "Women farmers and KHI volunteers at the Seeds of Resilience programme in Keti Community, Abuja",
   },
 
   mission: {

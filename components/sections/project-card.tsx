@@ -1,11 +1,26 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import {
+  ArrowRight,
+  GraduationCap,
+  HeartPulse,
+  Sprout,
+  Wheat,
+  type LucideIcon,
+} from "lucide-react";
 
 import { PlaceholderImage } from "@/components/shared/placeholder-image";
 import { getPartner } from "@/content/partners";
 import { getProgram } from "@/content/programs";
 import type { Project, ProjectStatus } from "@/content/projects";
 import { cn } from "@/lib/utils";
+
+/** Placeholder icons for projects that don't have photos yet. */
+const programIcons: Record<string, LucideIcon> = {
+  "education-scholarships": GraduationCap,
+  "health-hygiene": HeartPulse,
+  "food-relief": Wheat,
+  "youth-leadership": Sprout,
+};
 
 function StatusBadge({ status }: { status: ProjectStatus }) {
   const isOngoing = status === "ongoing";
@@ -27,11 +42,15 @@ export function ProjectCard({ project }: { project: Project }) {
     ? getPartner(project.partnerSlug)
     : undefined;
 
+  const image = project.cardImage ?? project.gallery?.[0]?.src;
+
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-card transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-md">
       <PlaceholderImage
         alt={project.imageAlt}
-        src={project.cardImage ?? project.gallery?.[0]?.src}
+        src={image}
+        icon={program ? programIcons[program.slug] : undefined}
+        showLabel={false}
         className="aspect-[16/10] w-full rounded-none"
         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
       />

@@ -4,22 +4,28 @@ import { ArrowRight } from "lucide-react";
 import { Section } from "@/components/layout/section";
 import { Stagger, StaggerItem } from "@/components/motion/stagger";
 import { home } from "@/content/home";
-import { latestStories } from "@/content/stories";
+import type { Story } from "@/content/stories";
 import { cn } from "@/lib/utils";
 
 import { StoryCard } from "./story-card";
 
 /**
- * Latest news — signs of life. Degrades gracefully when content is thin: the
- * grid caps at two columns so two posts read as intentional, not a sparse 3-up.
- * `showHeader` is on for the homepage section and off on the Stories index
- * (which has its own page header).
+ * Latest news — signs of life. Degrades gracefully when content is thin: one
+ * post sits alone, two read as an intentional pair, three+ go 3-up on large
+ * screens. Renders nothing for zero stories (the Stories index shows its own
+ * empty state). `showHeader` is on for the homepage section and off on the
+ * Stories index (which has its own page header).
  */
 export function StoryGrid({
+  stories,
   showHeader = true,
   cardHeadingLevel,
-}: { showHeader?: boolean; cardHeadingLevel?: "h2" | "h3" } = {}) {
-  if (latestStories.length === 0) return null;
+}: {
+  stories: readonly Story[];
+  showHeader?: boolean;
+  cardHeadingLevel?: "h2" | "h3";
+}) {
+  if (stories.length === 0) return null;
 
   // Under the homepage "Latest news" h2 → cards are h3; on the Stories index
   // (no section h2, directly under the page h1) → cards are h2.
@@ -48,10 +54,14 @@ export function StoryGrid({
       <Stagger
         className={cn(
           "mt-10 grid gap-6",
-          latestStories.length > 1 ? "sm:grid-cols-2" : "max-w-xl",
+          stories.length > 2
+            ? "sm:grid-cols-2 lg:grid-cols-3"
+            : stories.length > 1
+              ? "sm:grid-cols-2"
+              : "max-w-xl",
         )}
       >
-        {latestStories.map((story) => (
+        {stories.map((story) => (
           <StaggerItem key={story.slug} className="h-full">
             <StoryCard story={story} headingLevel={headingLevel} />
           </StaggerItem>

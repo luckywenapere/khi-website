@@ -10,13 +10,19 @@ import { ValuesOverlapRow } from "@/components/sections/values-overlap-row";
 import { about } from "@/content/about";
 import { site } from "@/content/site";
 import { createMetadata } from "@/lib/seo";
+import { getLatestStories } from "@/lib/stories";
+
+/** ISR: portal posts appear within a minute even without a redeploy. */
+export const revalidate = 60;
 
 export const metadata = createMetadata({
   path: "/",
   description: site.description,
 });
 
-export default function HomePage() {
+export default async function HomePage() {
+  const latestStories = await getLatestStories(3);
+
   return (
     <>
       {/* 1 · Hero — who KHI is + what they do + act (holds the single h1) */}
@@ -36,7 +42,7 @@ export default function HomePage() {
       {/* 7 · Partners — borrowed credibility (now with real logos) */}
       <PartnerCloud />
       {/* 8 · Latest news — signs of life */}
-      <StoryGrid />
+      <StoryGrid stories={latestStories} />
       {/* 9 · The ONE dark closing beat — donate (old-site signature band) */}
       <CtaBlock variant="photo" />
     </>
