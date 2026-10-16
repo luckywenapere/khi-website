@@ -72,6 +72,14 @@ const allProjects: Project[] = [
       { label: "Ask us about adopting", href: "/contact" },
     ],
     imageAlt: "Adopt a Child Campaign: sponsor a child's school tuition",
+    // Flyer from KHI's Instagram (12 Sep 2026); Blessing asked for it first.
+    cardImage: "/images/projects/adopt-a-child-campaign/flyer.jpg",
+    gallery: [
+      {
+        src: "/images/projects/adopt-a-child-campaign/flyer.jpg",
+        alt: "Adopt a Child Campaign flyer: Primary ₦100,000, Junior Secondary ₦150,000 and Senior Secondary ₦200,000 per child per session, with KHI's Zenith Bank account details and contact number",
+      },
+    ],
     featured: true,
   },
   {
