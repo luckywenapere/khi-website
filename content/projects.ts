@@ -65,7 +65,7 @@ const allProjects: Project[] = [
       "Senior Secondary: ₦200,000",
     ],
     closing: [
-      "To adopt a child or ask a question, call +234 708 222 7153 or email kindhumanitarianinitiative@gmail.com.",
+      "To adopt a child or ask a question, call +234 708 222 7153 or email info@khinitiative.org.",
     ],
     cta: [
       { label: "Sponsor a child", href: "/donate" },
