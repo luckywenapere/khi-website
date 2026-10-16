@@ -90,6 +90,46 @@ const allProjects: Project[] = [
       "Beyond the training, beneficiaries received practical equipment tailored to their trades, from tailoring machines to cooking pots, to turn their skills into sustainable livelihoods.",
     ],
     imageAlt: "Tools to Thrive 2026 entrepreneurship programme",
+    cardImage:
+      "/images/projects/tools-to-thrive-2026/beneficiaries-with-equipment.jpg",
+    gallery: [
+      {
+        src: "/images/projects/tools-to-thrive-2026/beneficiaries-with-equipment.jpg",
+        alt: "Tools to Thrive beneficiaries and the KHI team with the sewing machines, generators and cooking equipment they received",
+      },
+      {
+        src: "/images/projects/tools-to-thrive-2026/khi-team.jpg",
+        alt: "The KHI team in branded shirts in front of the Tools to Thrive backdrop",
+      },
+      {
+        src: "/images/projects/tools-to-thrive-2026/training-session.jpg",
+        alt: "Participants listening during a Tools to Thrive training session",
+      },
+      {
+        src: "/images/projects/tools-to-thrive-2026/speaker-session.jpg",
+        alt: "A facilitator speaks to participants during the entrepreneurship sessions",
+      },
+      {
+        src: "/images/projects/tools-to-thrive-2026/sewing-machine-handover.jpg",
+        alt: "A beneficiary receives a sewing machine and certificate",
+      },
+      {
+        src: "/images/projects/tools-to-thrive-2026/equipment-handover.jpg",
+        alt: "A beneficiary receives commercial cooking pots for his trade",
+      },
+      {
+        src: "/images/projects/tools-to-thrive-2026/beneficiary-sewing-machine.jpg",
+        alt: "A beneficiary with her new sewing machine in front of the Tools to Thrive banner",
+      },
+      {
+        src: "/images/projects/tools-to-thrive-2026/beneficiary-generator.jpg",
+        alt: "A beneficiary with his new generator in front of the Tools to Thrive banner",
+      },
+      {
+        src: "/images/projects/tools-to-thrive-2026/group-photo.jpg",
+        alt: "Tools to Thrive beneficiaries gathered with their equipment",
+      },
+    ],
     featured: true,
   },
   {
@@ -141,19 +181,17 @@ const allProjects: Project[] = [
     slug: "edukit",
     title: "EduKit",
     programSlug: "education-scholarships",
-    date: "February–March 2026",
+    // Blessing (Oct 16, 2026): three cohorts so far; Cohort 2 was with the
+    // Rotary Club of Omole-Golden on 27–28 January 2026. [KHI] Cohort 1 date.
+    date: "Cohorts 1–3",
     sortDate: "2026-03-03",
     status: "completed",
-    // [KHI] confirm details: kit contents read from the event photos/banners;
-    // the Cohort 2 banner also reads "28th January 2026" while the photos are
-    // dated 25–26 February 2026; the Rotary Club of Omole-Golden credit is
-    // from the Cohort 2 banner.
     summary:
-      "Learning kits for school students, distributed in phases: school bags, exercise books, uniforms and other essentials.",
+      "Learning kits for school students: school bags, exercise books, uniforms and other essentials. Three cohorts so far.",
     body: [
-      'EduKit ("Kindness in Every Backpack") puts school essentials in the hands of students, distributed in phases. EduKit 2 took place in February 2026 and EduKit 3 in March 2026.',
-      "Students received school backpacks with EduKit exercise books, school uniforms and other learning materials. EduKit 3 also included menstrual hygiene support, with sanitary pads for girls.",
-      "EduKit Cohort 2 was presented together with the Rotary Club of Omole-Golden.",
+      'EduKit ("Kindness in Every Backpack") puts school essentials in the hands of students. KHI has run three EduKit cohorts so far.',
+      "EduKit Cohort 2 was presented together with the Rotary Club of Omole-Golden on 27–28 January 2026.",
+      "Students received school backpacks with EduKit exercise books, school uniforms and other learning materials. Cohort 3 also included menstrual hygiene support, with sanitary pads for girls.",
     ],
     imageAlt: "Students holding their new EduKit backpacks",
     cardImage: "/images/projects/edukit/students-with-backpacks.jpg",

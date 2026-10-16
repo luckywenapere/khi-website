@@ -30,26 +30,26 @@ export const home = {
     /* Real photography (recovered/staged); one meaningful alt, rest decorative. */
     collage: [
       {
-        src: "/images/projects/pads-and-pals/one-act-of-kindness.jpg",
-        alt: 'Schoolgirls with a KHI "One Act of Kindness" sign at a school outreach',
+        src: "/images/projects/tools-to-thrive-2026/beneficiaries-with-equipment.jpg",
+        alt: "Tools to Thrive beneficiaries with the equipment they received for their trades",
       },
       {
-        src: "/images/home/P1060169.jpg",
-        alt: "KHI community program photo",
+        src: "/images/projects/edukit/backpacks-group.jpg",
+        alt: "Students with their EduKit backpacks",
         decorative: true,
       },
       {
-        src: "/images/about/sewing-training.jpg",
-        alt: "A young woman at a sewing machine during vocational training",
+        src: "/images/projects/seeds-of-resilience/farm-inputs-handover.jpg",
+        alt: "A woman farmer receives farm inputs at Seeds of Resilience",
       },
       {
-        src: "/images/home/P1060236.jpg",
-        alt: "KHI community program photo",
+        src: "/images/projects/partial-scholarship-2026/students-certificates.jpg",
+        alt: "Scholarship students with their certificates",
         decorative: true,
       },
       {
-        src: "/images/home/P1060266.jpg",
-        alt: "KHI community program photo",
+        src: "/images/projects/tools-to-thrive-2026/beneficiary-sewing-machine.jpg",
+        alt: "A Tools to Thrive beneficiary with her new sewing machine",
         decorative: true,
       },
     ],
@@ -64,9 +64,9 @@ export const home = {
       "Through the KHI Scholarship, twenty SSS3 students sat their final exams, keeping their path to graduation open.",
     // [KHI] Optional: a consented beneficiary quote can be added here later.
     // Phase 3b §6: genuine event photo.
-    image: "/images/home/P1060450.jpg",
-    imageAlt:
-      "A KHI scholarship recipient in their final year of secondary school",
+    // Oct 2026 refresh (Blessing asked for newer photos).
+    image: "/images/projects/partial-scholarship-2026/certificates-group.jpg",
+    imageAlt: "Students holding their KHI Scholarship Award certificates",
   },
 
   cta: {
@@ -100,8 +100,10 @@ export const home = {
       body: "Extend a hand. Your gift covers exam fees, hygiene kits, and food packs for families in and around Abuja.",
       label: "Donate now",
       href: "/donate",
-      image: "/images/home/they-need-your-help.jpg",
-      imageAlt: "Children at a KHI community program in Abuja",
+      // Oct 2026 refresh.
+      image: "/images/projects/edukit/students-celebrating.jpg",
+      imageAlt:
+        "Students and KHI volunteers celebrating at an EduKit distribution",
     },
   },
 
