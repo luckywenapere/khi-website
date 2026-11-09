@@ -11,8 +11,9 @@ import {
 import { PlaceholderImage } from "@/components/shared/placeholder-image";
 import { getPartner } from "@/content/partners";
 import { getProgram } from "@/content/programs";
-import type { Project, ProjectStatus } from "@/content/projects";
-import { cn } from "@/lib/utils";
+import type { Project } from "@/content/projects";
+
+import { StatusBadge } from "./status-badge";
 
 /** Placeholder icons for projects that don't have photos yet. */
 const programIcons: Record<string, LucideIcon> = {
@@ -22,19 +23,6 @@ const programIcons: Record<string, LucideIcon> = {
   "youth-leadership": Sprout,
 };
 
-function StatusBadge({ status }: { status: ProjectStatus }) {
-  const isOngoing = status === "ongoing";
-  return (
-    <span
-      className={cn(
-        "rounded-full px-2 py-0.5 text-xs font-medium",
-        isOngoing ? "bg-accent text-blue-700" : "bg-gray-100 text-gray-700",
-      )}
-    >
-      {isOngoing ? "Ongoing" : "Completed"}
-    </span>
-  );
-}
 
 export function ProjectCard({ project }: { project: Project }) {
   const program = getProgram(project.programSlug);

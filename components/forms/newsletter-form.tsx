@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 
@@ -9,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { newsletterSchema, type NewsletterValues } from "@/lib/schemas";
 
-type Status = "idle" | "submitting" | "success" | "error";
+import { useSubmission } from "./use-submission";
 
 export function NewsletterForm() {
   const {
@@ -20,28 +19,13 @@ export function NewsletterForm() {
     resolver: zodResolver(newsletterSchema),
     defaultValues: { email: "", company: "" },
   });
-  const [status, setStatus] = useState<Status>("idle");
-  const [errorMessage, setErrorMessage] = useState("");
-  const statusRef = useRef<HTMLParagraphElement>(null);
+  const { state, submit, statusRef } = useSubmission<HTMLParagraphElement>();
 
-  useEffect(() => {
-    if (status === "success" || status === "error") {
-      statusRef.current?.focus();
-    }
-  }, [status]);
-
-  async function onSubmit(values: NewsletterValues) {
-    setStatus("submitting");
-    const result = await submitNewsletter(values);
-    if (result.status === "success") {
-      setStatus("success");
-    } else {
-      setStatus("error");
-      setErrorMessage(result.message);
-    }
+  function onSubmit(values: NewsletterValues) {
+    void submit(() => submitNewsletter(values));
   }
 
-  if (status === "success") {
+  if (state.status === "success") {
     return (
       <p
         ref={statusRef}
@@ -81,7 +65,7 @@ export function NewsletterForm() {
           aria-describedby={
             errors.email
               ? "newsletter-error"
-              : status === "error"
+              : state.status === "error"
                 ? "newsletter-status"
                 : undefined
           }
@@ -89,10 +73,10 @@ export function NewsletterForm() {
         />
         <Button
           type="submit"
-          disabled={status === "submitting"}
+          disabled={state.status === "submitting"}
           className="h-8 shrink-0 px-4"
         >
-          {status === "submitting" ? "…" : "Subscribe"}
+          {state.status === "submitting" ? "…" : "Subscribe"}
         </Button>
       </div>
       {errors.email ? (
@@ -108,7 +92,7 @@ export function NewsletterForm() {
           Occasional updates. No spam, unsubscribe anytime.
         </p>
       )}
-      {status === "error" ? (
+      {state.status === "error" ? (
         <p
           id="newsletter-status"
           ref={statusRef}
@@ -117,7 +101,7 @@ export function NewsletterForm() {
           aria-live="assertive"
           className="mt-2 text-xs text-destructive outline-none"
         >
-          {errorMessage}
+          {state.message}
         </p>
       ) : null}
     </form>

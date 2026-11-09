@@ -10,20 +10,7 @@ import type { Project } from "@/content/projects";
 import { cn } from "@/lib/utils";
 
 import { Gallery, type GalleryImage } from "./gallery";
-
-function StatusBadge({ status }: { status: Project["status"] }) {
-  const isOngoing = status === "ongoing";
-  return (
-    <span
-      className={cn(
-        "rounded-full px-2 py-0.5 text-xs font-medium",
-        isOngoing ? "bg-accent text-blue-700" : "bg-gray-100 text-gray-700",
-      )}
-    >
-      {isOngoing ? "Ongoing" : "Completed"}
-    </span>
-  );
-}
+import { StatusBadge } from "./status-badge";
 
 /**
  * Full project layout: program tag, status, partner link, date, body, and the

@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 
@@ -12,8 +11,7 @@ import { programs } from "@/content/programs";
 import { volunteerSchema, type VolunteerValues } from "@/lib/schemas";
 
 import { Field } from "./field";
-
-type Status = "idle" | "submitting" | "success" | "error";
+import { useSubmission } from "./use-submission";
 
 export function VolunteerForm() {
   const {
@@ -31,28 +29,13 @@ export function VolunteerForm() {
       company: "",
     },
   });
-  const [status, setStatus] = useState<Status>("idle");
-  const [errorMessage, setErrorMessage] = useState("");
-  const statusRef = useRef<HTMLDivElement>(null);
+  const { state, submit, statusRef } = useSubmission();
 
-  useEffect(() => {
-    if (status === "success" || status === "error") {
-      statusRef.current?.focus();
-    }
-  }, [status]);
-
-  async function onSubmit(values: VolunteerValues) {
-    setStatus("submitting");
-    const result = await submitVolunteer(values);
-    if (result.status === "success") {
-      setStatus("success");
-    } else {
-      setStatus("error");
-      setErrorMessage(result.message);
-    }
+  function onSubmit(values: VolunteerValues) {
+    void submit(() => submitVolunteer(values));
   }
 
-  if (status === "success") {
+  if (state.status === "success") {
     return (
       <div
         ref={statusRef}
@@ -170,19 +153,19 @@ export function VolunteerForm() {
         aria-live="assertive"
         className="outline-none"
       >
-        {status === "error" ? (
+        {state.status === "error" ? (
           <p role="alert" className="text-sm text-destructive">
-            {errorMessage}
+            {state.message}
           </p>
         ) : null}
       </div>
 
       <Button
         type="submit"
-        disabled={status === "submitting"}
+        disabled={state.status === "submitting"}
         className="h-11 rounded-md px-6 text-base"
       >
-        {status === "submitting" ? "Sending…" : "Become a volunteer"}
+        {state.status === "submitting" ? "Sending…" : "Become a volunteer"}
       </Button>
     </form>
   );

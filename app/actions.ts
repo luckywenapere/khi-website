@@ -2,18 +2,15 @@
 
 import { deliver } from "@/lib/email";
 import {
+  GENERIC_FORM_ERROR as GENERIC_ERROR,
+  VALIDATION_FORM_ERROR as VALIDATION_ERROR,
+  type FormResult,
+} from "@/lib/form-submission";
+import {
   contactSchema,
   newsletterSchema,
   volunteerSchema,
 } from "@/lib/schemas";
-
-// Not exported: a "use server" module may only export async functions.
-// Callers receive this shape structurally from the action return types.
-type FormResult = { status: "success" } | { status: "error"; message: string };
-
-const GENERIC_ERROR =
-  "Sorry, we couldn't send your message right now. Please email info@khinitiative.org directly.";
-const VALIDATION_ERROR = "Please check the form and try again.";
 
 export async function submitContact(raw: unknown): Promise<FormResult> {
   const parsed = contactSchema.safeParse(raw);

@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 
@@ -11,8 +10,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { contactSchema, type ContactValues } from "@/lib/schemas";
 
 import { Field } from "./field";
-
-type Status = "idle" | "submitting" | "success" | "error";
+import { useSubmission } from "./use-submission";
 
 export function ContactForm() {
   const {
@@ -29,30 +27,13 @@ export function ContactForm() {
       company: "",
     },
   });
-  const [status, setStatus] = useState<Status>("idle");
-  const [errorMessage, setErrorMessage] = useState("");
-  const statusRef = useRef<HTMLDivElement>(null);
+  const { state, submit, statusRef } = useSubmission();
 
-  // Move focus to the status region once it reflects the result (ref access
-  // belongs in an effect, not in the submit handler / render).
-  useEffect(() => {
-    if (status === "success" || status === "error") {
-      statusRef.current?.focus();
-    }
-  }, [status]);
-
-  async function onSubmit(values: ContactValues) {
-    setStatus("submitting");
-    const result = await submitContact(values);
-    if (result.status === "success") {
-      setStatus("success");
-    } else {
-      setStatus("error");
-      setErrorMessage(result.message);
-    }
+  function onSubmit(values: ContactValues) {
+    void submit(() => submitContact(values));
   }
 
-  if (status === "success") {
+  if (state.status === "success") {
     return (
       <div
         ref={statusRef}
@@ -139,19 +120,19 @@ export function ContactForm() {
         aria-live="assertive"
         className="outline-none"
       >
-        {status === "error" ? (
+        {state.status === "error" ? (
           <p role="alert" className="text-sm text-destructive">
-            {errorMessage}
+            {state.message}
           </p>
         ) : null}
       </div>
 
       <Button
         type="submit"
-        disabled={status === "submitting"}
+        disabled={state.status === "submitting"}
         className="h-11 rounded-md px-6 text-base"
       >
-        {status === "submitting" ? "Sending…" : "Send message"}
+        {state.status === "submitting" ? "Sending…" : "Send message"}
       </Button>
     </form>
   );
