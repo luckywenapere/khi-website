@@ -37,7 +37,7 @@ export const site = {
       full: "24 Kaltungo Street, Garki 2, Abuja, Nigeria",
     },
     email: "info@khinitiative.org",
-    phones: ["+234 708 222 7153", "+234 908 892 8236"],
+    phones: ["+234 708 222 7153"],
   },
   socials: [
     {
